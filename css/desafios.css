@@ -1,0 +1,109 @@
+body {
+    background-image: url(../sources//images/fonddo.png);
+    background: size 100%;;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+
+}
+.logo {
+    position: absolute;
+    left: 49%;
+    margin-top: 4px;
+    height: 40px; 
+    z-index: 12;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-top: 25px;
+    padding: 0;
+}
+
+nav ul:first-child {
+    justify-content: flex-start;
+}
+
+nav ul:last-child {
+    justify-content: flex-end;
+}
+
+nav ul i {
+    font-size: 24px;
+    color: #fffefe;
+}
+footer {
+    background-color: #2B2159; 
+    padding: 15px;
+    text-align: center;
+}
+.imagenes {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 30px;
+margin-top: 15px;
+}
+
+.footer-content {
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff; 
+}
+
+.logof {
+    height: 50px; 
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #fff; 
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.suggestions {
+    color: #fff; 
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.suggestions:hover {
+    text-decoration: underline;
+}
