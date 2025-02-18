@@ -1,6 +1,6 @@
 body {
     overflow-x: hidden;
-    background-size:  100%;
+    background-size: 100%;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
@@ -13,6 +13,13 @@ header {
 .logo {
     height: 40px; 
 }
+
+.respmenu a {
+font-family: "LEMONMILK";
+
+}
+
+
 #container{
     margin-top: 20%;
     text-align: right;
@@ -71,17 +78,21 @@ nav ul i {
 @media(max-width:576px){
     #titulitoT{
     font-size: 20px;
-    
     }
-    
+    #container{
+        margin-top: 5%;
+        text-align: right;
+        left: 30px;
+        font-weight: lighter;
+    }
     #titulo34T{
     font-size: 20px;
     }
 
     body {
         overflow-x: hidden;
-        background-image: url(../sources//images/FONDOXS.png);
-        background-size: 600px;
+        background-image: url(../sources//images/fondoinicio.png);
+        
         background-repeat: no-repeat;
     }
 }
@@ -89,35 +100,29 @@ nav ul i {
 @media(max-width:992px) and (min-width:577px){
     #titulitoT{
         font-size: 25px;
-        
         }
-        
         #titulo34T{
         font-size: 25px;
         }
 
         body {
             overflow-x: hidden;
-            background-image: url(../sources//images/FONDOMEDIANO.png);
-            background-size: 1000px;
+            background-image: url(../sources//images/fondoinicio.png);
             background-repeat: no-repeat;
         }
 }
 
 
 
-@media(min-width:1080px){
+@media(min-width:993px){
     #titulitoT{
         font-size: 30px;
-        
         }
-        
         #titulo34T{
         font-size: 30px;
         }
         body {
-            background-image: url(../sources/images/FONDOGRANDE.png);
-            background-size: 1400px;
+            background-image: url(../sources/images/fondoinicio.png);
             background-repeat: no-repeat;
             overflow-x: hidden;
         }
@@ -126,7 +131,6 @@ nav ul i {
 .strong{
  color: #fff;
  cursor: pointer;
- 
 }
 
  
@@ -186,7 +190,7 @@ nav ul i {
 
 
 .mission0 {
-    background-image: url(../sources/images/Adobe\ Photoshop\ 24.0\ \(Windows\)\ 442x600_000010.jpg);
+    background-image: url(../sources/images/fondocards.jpg);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -202,7 +206,7 @@ nav ul i {
 
 }
 .mission1 {
-    background-image: url(../sources/images/Adobe\ Photoshop\ 24.0\ \(Windows\)\ 442x600_000010.jpg);
+    background-image: url(../sources/images/fondocards.jpg);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -218,7 +222,7 @@ nav ul i {
 
 }
 .mission2 {
-    background-image: url(../sources/images/Adobe\ Photoshop\ 24.0\ \(Windows\)\ 442x600_000010.jpg);
+    background-image: url(../sources/images/fondocards.jpg);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -323,8 +327,6 @@ color: #fff;
 }
 
 
-
-
 .imagenes {
 display: flex;
 align-items: center;
@@ -396,30 +398,6 @@ margin-top: 15px;
     transition: 0.3s;
 }
 
-/* Mostrar menú hamburguesa solo en pantallas pequeñas */
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #333;
-        width: 100%;
-    }
-
-    .menu.show {
-        display: flex;
-
-    }
-
-    .hamburger {
-        display: flex;
-        
-    }
-}
-
-
 
 footer {
     background-color: #2B2159; 
@@ -454,6 +432,13 @@ margin-top: 15px;
     font-size: 20px;
     text-decoration: none;
 }
+
+
+
+
+
+
+
 
 .suggestions {
     color: #fff; 
