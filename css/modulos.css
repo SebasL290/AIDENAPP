@@ -69,7 +69,7 @@ nav ul i {
     }   
 }
     
-@media(max-width:992px) and (min-width:577px){
+@media(max-width:1400px) and (min-width:577px){
     body{
         background-image: url(../sources/images/fondomodulos.png);
         }
@@ -380,6 +380,8 @@ margin-top: 15px;
     max-width: 200px;
     font-variant: small-caps;
     text-shadow: 1px 1px black;
+    align-items: flex-end;
+    font-family: "LEMONMILK";
   }
 
   .respmenu li {
@@ -417,15 +419,15 @@ margin-top: 15px;
     display: none;
   }
   
-  .respmenu input:checked ~ nav {
+.respmenu input:checked ~ nav {
     display: flex;
     position: absolute;
-    right: 100px;
-  }
+    right: 145px;
+}
   
-  .respmenu input:checked ~ .fa-bars {
+.respmenu input:checked ~ .fa-bars {
     display: none;
-  }
+}
   
   .respmenu input:not(:checked) ~ .fa-times {
     display: none;
@@ -647,5 +649,5 @@ header {
     text-decoration: underline;
 }
 
-
 /* pop up */
+
