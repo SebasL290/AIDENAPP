@@ -27,6 +27,8 @@ btnpopup.addEventListener('click', ()=> {
 iconclose.addEventListener('click', ()=> {
     wrapper.classList.remove('active-popup');
 });
+
+
 //registro
 const formulario = document.querySelector('.registro')
 const  ingresar = document.querySelector('.inicio')
@@ -92,34 +94,3 @@ btncerrars.addEventListener('click', () => {
     saludo.innerHTML = '';
     btncerrars.style.display = 'none';
 });
-
-
-
-/* function colors(){
-    let colores =
-    { 
-        color1: "azul",
-        color2: "amarillo",
-        color3:"verde"
-}
-localStorage.setItem("colores", JSON.stringify(colores))
-}
-formulario.addEventListener('submit',colors)
-
-let info = JSON.parse(localStorage.getItem("colores")) */
-
-
-
-
-
-let ciudad = {
-    city: "medellin"
-    }
-
-    localStorage.setItem('city', JSON.stringify(city))
-
-    let medellin = JSON.parse( localStorage.getItem('user'))
-
-
-    
-

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USUARIO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="../sources/images/logo.ico">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="../js/dashboard.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div class="d-flex flex-column justify-content-between min-vh-100">
+        <div class="container-fluid " id="header">
+            <nav class="nav-hed">
+                <ul class="btninicio-popup">
+                    <button href="" class="atras"><i class="fa-solid fa-arrow-left"></i></button>
+                    
+
+                    <div class="iniciada">
+                        <span id="saludo"></span>
+                        <button id="btncerrars" style="display:none;">Cerrar sesión</button>
+                    </div>
+                </ul>
+                <a href="../index.html" class="logo"> <img src="../sources/images/logo.png" class="logo" alt="logo"></a>
+                <ul>
+                    <div class="respmenu">
+                        <input type="checkbox">
+                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-times"></i>
+                        <nav>
+                            <ul>
+                                <li><a href="./modulo1.html">MISION 0</a></li>
+                                <li><a href="./modulo2.html">MISION 1</a></li>
+                                <li><a href="./modulo3.html">MISION 2</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+
+        
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card text-center p-5 shadow-lg" style="width: 450px;">
+            
+            <!-- Contenedor del avatar más grande -->
+            <div class="avatar-container mx-auto mb-3">
+                <img id="avatar-img" src="avatar1.png" alt="Avatar" class="rounded-circle border border-primary p-2">
+            </div>
+
+            <!-- Menú desplegable para cambiar el avatar -->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown">
+                    Cambiar Avatar
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item avatar-option" data-avatar="avatar1.png" href="#">Avatar 1</a></li>
+                    <li><a class="dropdown-item avatar-option" data-avatar="avatar2.png" href="#">Avatar 2</a></li>
+                    <li><a class="dropdown-item avatar-option" data-avatar="avatar3.png" href="#">Avatar 3</a></li>
+                </ul>
+            </div>
+
+            <!-- Nombre y frase motivacional -->
+            <h3 class="mt-3">Juan Pérez</h3>
+            <p class="text-muted">"El éxito es la suma de pequeños esfuerzos repetidos cada día."</p>
+
+            <!-- Barras de progreso -->
+            <div class="progress-container mt-4">
+
+                <!-- Barra 1 -->
+                <label class="fw-bold">Aprendizaje</label>
+                <div class="progress progress-custom mt-2">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" 
+                        style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                        80%
+                    </div>
+                </div>
+
+                <!-- Barra 2 -->
+                <label class="fw-bold mt-3">Creatividad</label>
+                <div class="progress progress-custom mt-2">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" 
+                        style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                        65%
+                    </div>
+                </div>
+
+                <!-- Barra 3 -->
+                <label class="fw-bold mt-3">Productividad</label>
+                <div class="progress progress-custom mt-2">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning text-dark" role="progressbar" 
+                        style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                        50%
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Botón de cerrar sesión (más pequeño) -->
+            <button class="btn btn-danger btn-sm mt-4 px-4">Cerrar Sesión</button>
+        
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="imagenes">
+                <img src="../sources/images/logocompleto.png" alt="AIDEN Logo" class="logof">
+                <a href="#" class="suggestions">Enviar sugerencias</a>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
+
+
+
+
+

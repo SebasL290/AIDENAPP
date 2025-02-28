@@ -1,0 +1,170 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(../sources/images/fondomodulos.png);
+  background-size: cover;
+}
+
+@font-face {
+  font-family: "LEMONMILK";
+  src: url("../sources/fonts//LEMONMILK-Medium.otf");
+  src: url("../sources/fonts/LEMONMIL-Regular.otf")
+}
+
+/* menu */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+.fa-user{
+color: #f4f4f4;
+}
+
+.atras{
+background: none;
+border: none;
+color: #f4f4f4;
+font-size: 25px;
+
+}
+
+.logo {
+  position: absolute;
+  left: 49%;
+  height: 40px; 
+  z-index: 12;
+}
+
+.respmenu a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  width: 150px;
+  flex-direction: column;
+  padding: 10px 20px; 
+  max-width: 200px;
+  font-variant: small-caps;
+  text-shadow: 1px 1px black;
+  align-items: flex-end;
+}
+
+.respmenu li {
+  margin-top: 5px;
+}
+
+.respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+  position: absolute;
+  box-sizing: border-box;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  right: -10px;
+  top: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.respmenu .fa-bars, .respmenu .fa-times {
+  font-size: 30px;
+  pointer-events: none;
+}
+
+.respmenu input[type="checkbox"] {
+  opacity: 0;
+}
+
+.respmenu {
+  color: white;
+  position: relative;
+  min-height: 30px;
+}
+
+.respmenu nav {
+  display: none;
+}
+
+.respmenu input:checked ~ nav {
+  display: flex;
+  position: absolute;
+  right: 145px;
+}
+
+.respmenu input:checked ~ .fa-bars {
+  display: none;
+}
+
+.respmenu input:not(:checked) ~ .fa-times {
+  display: none;
+}
+
+
+/* body */
+.text-center{
+ font-family: "LEMONMILK";
+ color: #f4f4f4;
+}
+
+.avatar-container img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+/* Barras de progreso más llamativas */
+.progress-custom {
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+  font-weight: bold;
+  font-size: 14px;
+}
+/* footer */
+
+footer {
+  background-color: #2B2159; 
+  padding: 15px;
+  text-align: center;
+}
+.imagenes {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 30px;
+margin-top: 15px;
+}
+.footer-content {
+  
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff; 
+}
+
+.logof {
+  height: 50px; 
+  cursor: pointer;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #fff; 
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.suggestions {
+  color: #fff; 
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.suggestions:hover {
+  text-decoration: underline;
+}

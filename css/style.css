@@ -19,6 +19,12 @@ header {
 font-family: "LEMONMILK";
 
 }
+#usuario {
+background: none;
+color: white;
+border: none;
+font-size: 25px;
+}
 
 
 #container{
@@ -70,7 +76,10 @@ nav ul i {
     font-family: "LEMONMILK";
     font-weight: lighter;
     color: #bca6d1;
-    font-size: 10px;
+
+}
+#titulo34 h2{
+    font-size: 20px;
 
 }
 
@@ -78,6 +87,7 @@ nav ul i {
     
     color: #bca6d1;
     font-weight: lighter;
+    font-size: 30px;
 }
 
 
@@ -441,12 +451,6 @@ margin-top: 15px;
 }
 
 
-
-
-
-
-
-
 .suggestions {
     color: #fff; 
     text-decoration: none;
@@ -526,6 +530,22 @@ margin-top: 15px;
 
   
 /* pop up */
+#btncerrars{
+    background-color:#bca6d1 ;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+
+}
+    
+#saludo{
+    font-family: 'LEMONMILK';
+    color: #fffefe;
+   
+}
 
 .btninicio-popup{
     background: none;
@@ -547,6 +567,7 @@ margin-top: 15px;
     overflow: hidden;
     transform: scale(0);
     transition:transform .5s ease , height .2s ease;
+    
 }
 .wrapper.active-popup{
     transform: scale(1);
