@@ -108,7 +108,7 @@ nav ul i {
 
     body {
         overflow-x: hidden;
-        background-image: url(../sources//images/fondopequeño.png);
+        background-image: url(../sources//images/fondo.png);
         
         background-repeat: no-repeat;
     }
@@ -124,7 +124,7 @@ nav ul i {
 
         body {
             overflow-x: hidden;
-            background-image: url(../sources//images/fondoinicio.png);
+            background-image: url(../sources//images/fondopequeño.pngg);
             background-repeat: no-repeat;
         }
 }
