@@ -25,6 +25,10 @@ color: white;
 border: none;
 font-size: 25px;
 }
+#iniciar{
+color: #fff;
+
+}
 
 
 #container{
@@ -356,12 +360,6 @@ margin-top: 15px;
     height: 50px; 
 }
 
-.social-icons a {
-    margin: 0 10px;
-    color: #fff; 
-    font-size: 20px;
-    text-decoration: none;
-}
 
 .suggestions {
     color: #fff; 
@@ -400,20 +398,6 @@ margin-top: 15px;
     background-color: #555;
 }
 
-/* Estilo de la hamburguesa */
-.hamburger {
-    cursor: pointer;
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: 0.3s;
-}
 
 
 footer {
@@ -428,8 +412,8 @@ justify-content: center;
 gap: 30px;
 margin-top: 15px;
 }
+
 .footer-content {
-    
     
     justify-content: space-between;
     align-items: center;
@@ -550,6 +534,8 @@ margin-top: 15px;
 .btninicio-popup{
     background: none;
     border: none;
+ /*    color: white ;
+    font-size: 10px; */
 }
 .wrapper{
     margin: 150px auto 0;

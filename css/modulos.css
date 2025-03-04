@@ -16,6 +16,12 @@ nav {
     justify-content: space-between;
     width: 100%;
 }
+#usuario {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 25px;
+    }
 
 nav ul {
     display: flex;
