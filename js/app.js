@@ -1,10 +1,11 @@
 //abrir popup
 const wrapper = document.querySelector('.wrapper');
+const btn = document.querySelector('.btni')
+const  ingresar = document.querySelector('.btnr')
 const inicolink = document.querySelector('.inico-link');
 const registrarselink = document.querySelector('.registrarse-link');
 const btnpopup = document.querySelector('.btninicio-popup');
 const iconclose = document.querySelector('.icon-close');
-const logoutBtn = document.getElementById('btncerrars');
 const saludo = document.getElementById('saludo')
 const usuarioinput = document.getElementById('usuario')
 const contraseñainput = document.getElementById('contraseña')
@@ -31,10 +32,9 @@ iconclose.addEventListener('click', ()=> {
 
 //registro
 const formulario = document.querySelector('.registro')
-const  ingresar = document.querySelector('.inicio')
 const username = document.querySelector('.usernamer')
 const password = document.querySelector('.passwordr')
-const email = document.querySelector('#correo')
+const email = document.querySelector('.correo')
 
 function registrarUser(e) {
     e.preventDefault();
@@ -44,27 +44,24 @@ function registrarUser(e) {
         userEmail: email.value.toLowerCase(),
     }
     localStorage.setItem('user', JSON.stringify(user))
-    /* formulario.reset();  */
+    wrapper.classList.remove('active');
 }
 formulario.addEventListener('submit', registrarUser)
-/* let robo =JSON.parse(localStorage.getItem("user")) */
 
 
 //inicio de sesion 
 function validarUsuario (e){
 e.preventDefault()
-let User = JSON.parse( localStorage.getItem('user'))
-console.log(User.userName)
-console.log(User.userPass)
+let user = JSON.parse( localStorage.getItem('user'))
 
-
-    if(username.value === User.userName && password.value === User.userPass){
+    if(username.value === user.userName && password.value === user.userPass){
         console.log('felicidades puedes entrar ')
-        window.location = './index.html' 
+      wrapper.classList.remove('active-popup');
     }else{
         console.log('sigue intentando')
+        alert("Usuario o contraseña incorrecta")
     }
-   /*  formulario.reset()   */
+    formulario.reset()
 }
 ingresar.addEventListener('submit',validarUsuario)
 
@@ -74,23 +71,11 @@ ingresar.addEventListener('submit',validarUsuario)
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const usuario = usuarioinput.value;
-    const contraseña = contraseñainput.value;
+    const usuario = JSON.parse(localStorage.getItem("user"));
 
     if (recordarmeCheckbox.checked) {
         localStorage.setItem('usuario', usuario);
-        localStorage.setItem('contraseña', contraseña)
     }
-
-    saludo.innerHTML = `Hola, ${usuario}`;
-    logoutBtn.style.display = 'inline';
+    saludo.innerHTML = `Hola, ${usuario.userName}`;
     wrapper.classList.remove('active-popup');
-
-});
-
-
-btncerrars.addEventListener('click', () => {
-    localStorage.removeItem('user');
-    saludo.innerHTML = '';
-    btncerrars.style.display = 'none';
 });

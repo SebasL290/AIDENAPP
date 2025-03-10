@@ -96,7 +96,11 @@ nav ul i {
 
 
 @media(max-width:576px){
-
+    body {
+        overflow-x: hidden;
+        background-image: url(../sources//images/fondomodulos.png);
+        background-repeat: no-repeat;
+    }
     #titulitoT{
     font-size: 20px;
     }
@@ -109,52 +113,40 @@ nav ul i {
     #titulo34T{
     font-size: 20px;
     }
-
-    body {
-        overflow-x: hidden;
-        background-image: url(../sources//images/fondoinicio.png);
-        
-        background-repeat: no-repeat;
-    }
 }
 
 @media(max-width:992px) and (min-width:577px){
+    body {
+    overflow-x: hidden;
+    background-image: url(../sources//images/fondomodulos.png);
+    background-repeat: no-repeat;
+     }
     #titulitoT{
-        font-size: 25px;
-        }
-        #titulo34T{
-        font-size: 25px;
-        }
-
-        body {
-            overflow-x: hidden;
-            background-image: url(../sources//images/fondoinicio.png);
-            background-repeat: no-repeat;
-        }
+    font-size: 25px;
+    }
+    #titulo34T{
+    font-size: 25px;
+    }
 }
 
-
-
 @media(min-width:993px){
+    body {
+    background-image: url(../sources/images/fondomodulos.png);
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    }
     #titulitoT{
-        font-size: 30px;
-        }
-        #titulo34T{
-        font-size: 30px;
-        }
-        body {
-            background-image: url(../sources/images/fondoinicio.png);
-            background-repeat: no-repeat;
-            overflow-x: hidden;
-        }
+    font-size: 30px;
+    }
+    #titulo34T{
+    font-size: 30px;
+    }        
 }
 
 .strong{
  color: #fff;
  cursor: pointer;
 }
-
- 
 
 #misiones {
     display: flex;
@@ -665,7 +657,7 @@ margin-top: 15px;
 .recordarme a:hover{
     text-decoration: underline;
 }
-#btn{
+#btni{
     width: 100%;
     height: 45px;
     background: #482568;
@@ -677,7 +669,22 @@ margin-top: 15px;
     color: white;
     font-weight: 500;
 }
-#btn:hover {
+#btni:hover {
+    background: #3c1d5b;
+}
+#btnr{
+    width: 100%;
+    height: 45px;
+    background: #482568;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+}
+#btnr:hover {
     background: #3c1d5b;
 }
 .ingresar-registrarse{
