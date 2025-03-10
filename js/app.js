@@ -1,6 +1,6 @@
 //abrir popup
 const wrapper = document.querySelector('.wrapper');
-const btn = document.querySelector('.btni')
+const btn = document.querySelector('.btni');
 const  ingresar = document.querySelector('.btnr')
 const inicolink = document.querySelector('.inico-link');
 const registrarselink = document.querySelector('.registrarse-link');
@@ -10,6 +10,7 @@ const saludo = document.getElementById('saludo')
 const usuarioinput = document.getElementById('usuario')
 const contraseñainput = document.getElementById('contraseña')
 const recordarmeCheckbox = document.getElementById('recordarme')
+const loginForm = document.querySelector('#loginForm')
 
 
 
@@ -42,6 +43,7 @@ function registrarUser(e) {
         userName: username.value.toLowerCase(),
         userPass: password.value.toLowerCase(),
         userEmail: email.value.toLowerCase(),
+        userlogged: false
     }
     localStorage.setItem('user', JSON.stringify(user))
     wrapper.classList.remove('active');
@@ -55,27 +57,36 @@ e.preventDefault()
 let user = JSON.parse( localStorage.getItem('user'))
 
     if(username.value === user.userName && password.value === user.userPass){
-        console.log('felicidades puedes entrar ')
+      user.userlogged = true
+      localStorage.setItem("user", JSON.stringify(user))
       wrapper.classList.remove('active-popup');
     }else{
-        console.log('sigue intentando')
         alert("Usuario o contraseña incorrecta")
     }
-    formulario.reset()
 }
-ingresar.addEventListener('submit',validarUsuario)
+loginForm.addEventListener('submit',validarUsuario)
 
- 
+ const btnusuario  = document.querySelector(".Dash")
+ const btnregistro  = document.querySelector(".btnpopup")
 
 //saludo
-loginForm.addEventListener('submit', (e) => {
+let user = JSON.parse( localStorage.getItem('user'))
+
+function saludousuario(e){
     e.preventDefault();
+    let confirmarusuario = user ? user.userlogged : false
 
-    const usuario = JSON.parse(localStorage.getItem("user"));
-
-    if (recordarmeCheckbox.checked) {
-        localStorage.setItem('usuario', usuario);
+    if(confirmarusuario){
+        saludo.textContent = `Hola, ${user.userName}`;
+        wrapper.classList.remove('active-popup');
+        btnusuario.style.display = "flex"
+        btnregistro.style.display = "none"
+    }else{
+        saludo.textContent = ''; 
+        btnusuario.style.display = "none"
+        btnregistro.style.display = "flex"
     }
-    saludo.innerHTML = `Hola, ${usuario.userName}`;
-    wrapper.classList.remove('active-popup');
-});
+}
+
+document.addEventListener("DOMContentLoaded",saludousuario)
+

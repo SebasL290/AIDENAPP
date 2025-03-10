@@ -30,6 +30,9 @@ color: #fff;
 
 }
 
+.Dash{
+display: none;
+}
 
 #container{
    /*  margin-top: 20%; */
