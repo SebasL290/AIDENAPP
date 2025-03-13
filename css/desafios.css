@@ -281,8 +281,11 @@ margin-top: 15px;
     border: none;
 }
 .wrapper{
-    margin: 0px auto 0;
-    position: relative;
+    margin: 150px auto 0;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    right: 0;
     width: 400px;
     height: 440px;
     background-color: transparent;

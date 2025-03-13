@@ -51,7 +51,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-top: 20px;
 }
 #usuario {
   background: none;
@@ -225,22 +224,25 @@ margin-top: 15px;
   border: none;
 }
 .wrapper{
-  margin: 0px auto 0;
-  position: relative;
-  width: 400px;
-  height: 440px;
-  background-color: transparent;
-  border: 2px solid white;
-  border-radius: 20px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 0 30px black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transform: scale(0);
-  transition:transform .5s ease , height .2s ease;
-  
+    margin: 150px auto 0;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    width: 400px;
+    height: 440px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition:transform .5s ease , height .2s ease;
+    
 }
 .wrapper.active-popup{
   transform: scale(1);

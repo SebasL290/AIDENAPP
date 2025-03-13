@@ -518,7 +518,10 @@ margin-top: 15px;
 }
 .wrapper{
     margin: 150px auto 0;
-    position: relative;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    right: 0;
     width: 400px;
     height: 440px;
     background-color: transparent;
