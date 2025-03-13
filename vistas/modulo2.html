@@ -12,29 +12,94 @@
 
 </head>
 <body>
-    
- 
+
+</head>
+<body>
     <div class="container-fluid " id="header">
         <nav class="nav-hed">
-            <a href="../vistas/usuario.html"><button id="usuario" > <i class="fa-solid fa-rocket usuariob" ></i></button></a>
+            <ul class="btninicio-popup">
+                <button class="btninicio-popup"><i class="fa-solid fa-user  btnpopup"></i></button>
+                <a href="../vistas/usuario.html"><button id="usuario" class="Dash"> <i class="fa-solid fa-rocket usuariob " ></i></button></a>
+                <div class="iniciada"><span id="saludo"></span></div>
+            </ul>
+    
+            
             <a href="../index.html" class="logo"> <img src="../sources/images/logo.png" class="logo" alt="logo" ></a>
             <ul>
                     <div class="respmenu">
                     <input type="checkbox">
                     <i class="fas fa-bars"></i>
                     <i class="fas fa-times"></i>
-                    <nav >
+                    <nav>
                       <ul >
-                        <li><a href="./modulo1.html">MISION 0</a></li>
-                        <li><a href="./modulo2.html">MISION 1</a></li>
-                        <li><a href="./modulo3.html">MISION 2</a></li>
-                       </ul>
+                        <li><a href="../vistas/modulo1.html">MISION 0</a></li>
+                        <li><a href="../vistas/modulo2.html">MISION 1</a></li>
+                        <li><a href="../vistas/modulo3.html">MISION 2</a></li>
+                        
+                        </ul>
                     </nav>
                   </div>
             </ul>
         </nav>
     </div>
     
+    <!-- popups -->
+    <div class="wrapper">
+        <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
+    
+        <div class="form-box inicio">
+            <h1>INGRESAR</h1>
+            <form id="loginForm">
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    <input class="username" type="text" id="usuario" required>
+                    <label>Usuario</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                    <input class="password" type="password" id="contraseña" required>
+                    <label>Contraseña</label>
+               </div >
+               <div class="recordarme">
+                <label><input type="checkbox" id="recordarme">Recordarme</label>
+               <a href="#"><strong>Olvidé mi contraseña</strong></a>
+               </div>
+               <button type="submit" id="btni"  class="btni" >Ingresar</button>
+               <div class="ingresar-registrarse">
+                <p>No te has registrado? <a href="#" class="registrarse-link">Registrate</a></p>
+               </div>
+            </form>
+        </div>
+    
+        <div class="form-box registro">
+            <h1>REGISTRARSE</h1>
+            <form>
+                <div class="input-box" id="input-box">
+                    <span class="icon"><i class="fa-solid fa-user"></i></span>
+                    <input class="usernamer" type="text" >
+                    <label>Usuario</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" id="correo" class="correo">
+                    <label>Correo</label>
+               </div >
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                    <input class="passwordr" type="passwordr">
+                    <label>Contraseña</label>
+               </div >
+               <div class="recordarme">
+                <label><input type="checkbox">Acepto términos y condiciones</label>
+               </div>
+               <button type="submit" id="btnr"  class="btnr">Registrarme</button>
+               <div class="ingresar-registrarse">
+                <p>Ya tienes una cuenta? <a href="#" class="inico-link">Iniciar</a></p>
+               </div>
+            </form>
+        </div>
+    </div>
+
 <div class="container">
     <h2 style="font-family: LEMONMILK;" class="titulito">MÓDULO DE ILUSTRACIÓN:<br>TÉCNICAS BASICAS DE ILUSTRACIÓN</h2>
 </div>

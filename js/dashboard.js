@@ -28,9 +28,13 @@ document.querySelectorAll('.avatar-option').forEach(item => {
 });
 
 //cerrar sesion
+const btncerrars = document.querySelector('.btn1')
 
-btncerrars.addEventListener('click', () => {
-    localStorage.removeItem('user');
-    saludo.innerHTML = '';
-    btncerrars.style.display = 'none';
-});
+let user = JSON.parse( localStorage.getItem('user'))
+
+function cerrarsesion (){
+    user.userlogged = false
+    localStorage.setItem("user", JSON.stringify(user))
+    window.location = "index.html"
+}
+btncerrars.addEventListener("click",cerrarsesion)
