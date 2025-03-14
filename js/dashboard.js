@@ -35,6 +35,6 @@ let user = JSON.parse( localStorage.getItem('user'))
 function cerrarsesion (){
     user.userlogged = false
     localStorage.setItem("user", JSON.stringify(user))
-    window.location = "index.html"
+    window.location.href = "../index.html"
 }
 btncerrars.addEventListener("click",cerrarsesion)

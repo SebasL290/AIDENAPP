@@ -7,7 +7,7 @@ const registrarselink = document.querySelector('.registrarse-link');
 const btnpopup = document.querySelector('.btninicio-popup');
 const iconclose = document.querySelector('.icon-close');
 const saludo = document.getElementById('saludo')
-const usuarioinput = document.getElementById('usuario')
+const usuarioinput = document.querySelector('#usuarioi')
 const contraseñainput = document.getElementById('contraseña')
 const recordarmeCheckbox = document.getElementById('recordarme')
 const loginForm = document.querySelector('#loginForm')
@@ -55,11 +55,14 @@ formulario.addEventListener('submit', registrarUser)
 function validarUsuario (e){
 e.preventDefault()
 let user = JSON.parse( localStorage.getItem('user'))
-
-    if(username.value === user.userName && password.value === user.userPass){
+    if(usuarioinput.value === user.userName && contraseñainput.value === user.userPass){
       user.userlogged = true
       localStorage.setItem("user", JSON.stringify(user))
       wrapper.classList.remove('active-popup');
+      saludo.textContent = `Hola, ${user.userName}`;
+      wrapper.classList.remove('active-popup');
+      btnusuario.style.display = "flex"
+      btnregistro.style.display = "none"
     }else{
         alert("Usuario o contraseña incorrecta")
     }
@@ -72,21 +75,11 @@ loginForm.addEventListener('submit',validarUsuario)
 //saludo
 let user = JSON.parse( localStorage.getItem('user'))
 
-function saludousuario(e){
-    e.preventDefault();
-    let confirmarusuario = user ? user.userlogged : false
 
-    if(confirmarusuario){
-        saludo.textContent = `Hola, ${user.userName}`;
-        wrapper.classList.remove('active-popup');
-        btnusuario.style.display = "flex"
-        btnregistro.style.display = "none"
-    }else{
-        saludo.textContent = ''; 
-        btnusuario.style.display = "none"
-        btnregistro.style.display = "flex"
-    }
-}
+//se veran los moduloscon tranparencia pop up de registro 
 
-document.addEventListener("DOMContentLoaded",saludousuario)
+
+
+
+
 
