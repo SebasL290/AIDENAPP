@@ -17,9 +17,7 @@
     <div class="container-fluid " id="header">
         <nav class="nav-hed">
             <ul class="btninicio-popup">
-                <button class="btninicio-popup"><i class="fa-solid fa-user  btnpopup"></i></button>
-                <a href="../vistas/usuario.html"><button id="usuario" class="Dash"> <i class="fa-solid fa-rocket usuariob " ></i></button></a>
-                <div class="iniciada"><span id="saludo"></span></div>
+              <!-- aqui va la flecha hacia atras -->
             </ul>
     
             
@@ -42,131 +40,114 @@
         </nav>
     </div>
     
-    <!-- popups -->
-    <div class="wrapper">
-        <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
-    
-        <div class="form-box inicio">
-            <h1>INGRESAR</h1>
-            <form id="loginForm">
-                <div class="input-box">
-                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                    <input class="username" type="text" id="usuario" required>
-                    <label>Usuario</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
-                    <input class="password" type="password" id="contraseña" required>
-                    <label>Contraseña</label>
-               </div >
-               <div class="recordarme">
-                <label><input type="checkbox" id="recordarme">Recordarme</label>
-               <a href="#"><strong>Olvidé mi contraseña</strong></a>
-               </div>
-               <button type="submit" id="btni"  class="btni" >Ingresar</button>
-               <div class="ingresar-registrarse">
-                <p>No te has registrado? <a href="#" class="registrarse-link">Registrate</a></p>
-               </div>
-            </form>
-        </div>
-    
-        <div class="form-box registro">
-            <h1>REGISTRARSE</h1>
-            <form>
-                <div class="input-box" id="input-box">
-                    <span class="icon"><i class="fa-solid fa-user"></i></span>
-                    <input class="usernamer" type="text" >
-                    <label>Usuario</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                    <input type="email" id="correo" class="correo">
-                    <label>Correo</label>
-               </div >
-                <div class="input-box">
-                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
-                    <input class="passwordr" type="passwordr">
-                    <label>Contraseña</label>
-               </div >
-               <div class="recordarme">
-                <label><input type="checkbox">Acepto términos y condiciones</label>
-               </div>
-               <button type="submit" id="btnr"  class="btnr">Registrarme</button>
-               <div class="ingresar-registrarse">
-                <p>Ya tienes una cuenta? <a href="#" class="inico-link">Iniciar</a></p>
-               </div>
-            </form>
-        </div>
-    </div>
 
     <h2>DESAFÍO 1</h2>
+    
+    <div class="popup">
+    <div class="popup-caja">
+      <div class="Pop-C1">
+          <i class="fa-solid fa-xmark equis"></i>
+      </div>
+      <div class="Pop-C2">
+      <p class="pop-text"></p>
+    </div>
+    </div>
+  </div>
+
     <div class="quiz-container">
-        <h1 class="quiz-title">Prueba de Conocimientos</h1>
+        <h1 class="quiz-title">Prueba de Conocimientos - Arte Digital 🎨</h1>
         <form id="quiz-form">
             <div class="quiz-question">
-                <p>¿Cuál es la capital de Francia?</p>
-                <label><input type="radio" name="q1" value="Madrid"> Madrid</label>
-                <label><input type="radio" name="q1" value="París"> París</label>
-                <label><input type="radio" name="q1" value="Berlín"> Berlín</label>
-                <label><input type="radio" name="q1" value="Lisboa"> Lisboa</label>
+                <p>1️⃣ ¿Qué software es más utilizado para la ilustración digital?</p>
+                <label><input type="radio" name="q1" value="Photoshop"> Photoshop</label>
+                <label><input type="radio" name="q1" value="Illustrator"> Illustrator</label>
+                <label><input type="radio" name="q1" value="Blender"> Blender</label>
+                <label><input type="radio" name="q1" value="After Effects"> After Effects</label>
+                <span id="resultado-q1"></span>
             </div>
+    
             <div class="quiz-question">
-                <p>¿Cuánto es 2 + 2?</p>
-                <label><input type="radio" name="q2" value="3"> 3</label>
-                <label><input type="radio" name="q2" value="4"> 4</label>
-                <label><input type="radio" name="q2" value="5"> 5</label>
-                <label><input type="radio" name="q2" value="6"> 6</label>
+                <p>2️⃣ ¿Qué es una tableta gráfica?</p>
+                <label><input type="radio" name="q2" value="Un software de diseño"> Un software de diseño</label>
+                <label><input type="radio" name="q2" value="Un dispositivo para dibujar digitalmente"> Un dispositivo para dibujar digitalmente</label>
+                <label><input type="radio" name="q2" value="Un tipo de pintura digital"> Un tipo de pintura digital</label>
+                <label><input type="radio" name="q2" value="Un tipo de pantalla"> Un tipo de pantalla</label>
+                <span id="resultado-q2"></span>
             </div>
+    
             <div class="quiz-question">
-                <p>¿Cuál es el océano más grande?</p>
-                <label><input type="radio" name="q3" value="Atlántico"> Atlántico</label>
-                <label><input type="radio" name="q3" value="Pacífico"> Pacífico</label>
-                <label><input type="radio" name="q3" value="Índico"> Índico</label>
-                <label><input type="radio" name="q3" value="Ártico"> Ártico</label>
+                <p>3️⃣ ¿Cuál es el formato de imagen que admite transparencias?</p>
+                <label><input type="radio" name="q3" value="JPG"> JPG</label>
+                <label><input type="radio" name="q3" value="PNG"> PNG</label>
+                <label><input type="radio" name="q3" value="GIF"> GIF</label>
+                <label><input type="radio" name="q3" value="BMP"> BMP</label>
+                <span id="resultado-q3"></span>
             </div>
+    
             <div class="quiz-question">
-                <p>¿Quién pintó la Mona Lisa?</p>
-                <label><input type="radio" name="q3" value="Atlántico"> Atlántico</label>
-                <label><input type="radio" name="q3" value="Pacífico"> Pacífico</label>
-                <label><input type="radio" name="q3" value="Índico"> Índico</label>
-                <label><input type="radio" name="q3" value="Ártico"> Ártico</label>
+                <p>4️⃣ ¿Qué significa la sigla RGB en diseño digital?</p>
+                <label><input type="radio" name="q4" value="Rojo, Gris, Beige"> Rojo, Gris, Beige</label>
+                <label><input type="radio" name="q4" value="Rojo, Verde, Azul"> Rojo, Verde, Azul</label>
+                <label><input type="radio" name="q4" value="Rápido, Grueso, Bajo"> Rápido, Grueso, Bajo</label>
+                <label><input type="radio" name="q4" value="Real Graphic Balance"> Real Graphic Balance</label>
+                <span id="resultado-q4"></span>
             </div>
+    
             <div class="quiz-question">
-                <p>¿Cuál es el planeta más grande del sistema solar?</p>
-                <label><input type="radio" name="q3" value="Atlántico"> Atlántico</label>
-                <label><input type="radio" name="q3" value="Pacífico"> Pacífico</label>
-                <label><input type="radio" name="q3" value="Índico"> Índico</label>
-                <label><input type="radio" name="q3" value="Ártico"> Ártico</label>
+                <p>5️⃣ ¿Para qué se usa Adobe Illustrator?</p>
+                <label><input type="radio" name="q5" value="Modelado 3D"> Modelado 3D</label>
+                <label><input type="radio" name="q5" value="Diseño vectorial"> Diseño vectorial</label>
+                <label><input type="radio" name="q5" value="Edición de video"> Edición de video</label>
+                <label><input type="radio" name="q5" value="Composición musical"> Composición musical</label>
+                <span id="resultado-q5"></span>
             </div>
+    
             <div class="quiz-question">
-                <p>¿Cuál es el océano más grande?</p>
-                <label><input type="radio" name="q3" value="Atlántico"> Atlántico</label>
-                <label><input type="radio" name="q3" value="Pacífico"> Pacífico</label>
-                <label><input type="radio" name="q3" value="Índico"> Índico</label>
-                <label><input type="radio" name="q3" value="Ártico"> Ártico</label>
+                <p>6️⃣ ¿Qué herramienta se usa para dibujar en Photoshop?</p>
+                <label><input type="radio" name="q6" value="Pincel"> Pincel</label>
+                <label><input type="radio" name="q6" value="Texto"> Texto</label>
+                <label><input type="radio" name="q6" value="Recorte"> Recorte</label>
+                <label><input type="radio" name="q6" value="Lupa"> Lupa</label>
+                <span id="resultado-q6"></span>
             </div>
+    
             <div class="quiz-question">
-                <p>¿Cuál es el océano más grande?</p>
-                <label><input type="radio" name="q3" value="Atlántico"> Atlántico</label>
-                <label><input type="radio" name="q3" value="Pacífico"> Pacífico</label>
-                <label><input type="radio" name="q3" value="Índico"> Índico</label>
-                <label><input type="radio" name="q3" value="Ártico"> Ártico</label>
+                <p>7️⃣ ¿Qué es la resolución de una imagen?</p>
+                <label><input type="radio" name="q7" value="El tamaño del archivo"> El tamaño del archivo</label>
+                <label><input type="radio" name="q7" value="El número de píxeles por pulgada"> El número de píxeles por pulgada</label>
+                <label><input type="radio" name="q7" value="La cantidad de colores"> La cantidad de colores</label>
+                <label><input type="radio" name="q7" value="El brillo de la imagen"> El brillo de la imagen</label>
+                <span id="resultado-q7"></span>
             </div>
+    
             <div class="quiz-question">
-                <p>¿Cuál es el océano más grande?</p>
-                <label><input type="radio" name="q3" value="Atlántico"> Atlántico</label>
-                <label><input type="radio" name="q3" value="Pacífico"> Pacífico</label>
-                <label><input type="radio" name="q3" value="Índico"> Índico</label>
-                <label><input type="radio" name="q3" value="Ártico"> Ártico</label>
+                <p>8️⃣ ¿Qué tipo de gráficos no pierden calidad al escalarse?</p>
+                <label><input type="radio" name="q8" value="Bitmap"> Bitmap</label>
+                <label><input type="radio" name="q8" value="Vectoriales"> Vectoriales</label>
+                <label><input type="radio" name="q8" value="Pixelados"> Pixelados</label>
+                <label><input type="radio" name="q8" value="Rasterizados"> Rasterizados</label>
+                <span id="resultado-q8"></span>
             </div>
+    
             <div class="quiz-question">
-                <p>¿Cuál es el océano más grande?</p>
-                <label><input type="radio" name="q3" value="Atlántico"> Atlántico</label>
-                <label><input type="radio" name="q3" value="Pacífico"> Pacífico</label>
-                <label><input type="radio" name="q3" value="Índico"> Índico</label>
-                <label><input type="radio" name="q3" value="Ártico"> Ártico</label>
+                <p>9️⃣ ¿Cuál es el propósito del "Modo de Fusión" en Photoshop?</p>
+                <label><input type="radio" name="q9" value="Combinar capas de diferentes formas"> Combinar capas de diferentes formas</label>
+                <label><input type="radio" name="q9" value="Convertir una imagen a escala de grises"> Convertir una imagen a escala de grises</label>
+                <label><input type="radio" name="q9" value="Recortar imágenes"> Recortar imágenes</label>
+                <label><input type="radio" name="q9" value="Añadir filtros automáticos"> Añadir filtros automáticos</label>
+                <span id="resultado-q9"></span>
             </div>
-            <button class="buttone" type="button" onclick="checkAnswers()">Enviar respuestas</button>
+    
+            <div class="quiz-question">
+                <p>🔟 ¿Qué es un mockup en diseño?</p>
+                <label><input type="radio" name="q10" value="Un boceto hecho a mano"> Un boceto hecho a mano</label>
+                <label><input type="radio" name="q10" value="Una representación visual de un diseño"> Una representación visual de un diseño</label>
+                <label><input type="radio" name="q10" value="Un software de animación"> Un software de animación</label>
+                <label><input type="radio" name="q10" value="Un formato de imagen"> Un formato de imagen</label>
+                <span id="resultado-q10"></span>
+            </div>
+    
+            <button class="buttone" type="submit">Enviar respuestas</button>
         </form>
         <p id="result" class="quiz-result"></p>
     </div>

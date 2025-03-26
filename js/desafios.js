@@ -1,136 +1,143 @@
-//nav
-//abrir popup
-const wrapper = document.querySelector('.wrapper');
-const btn = document.querySelector('.btni');
-const  ingresar = document.querySelector('.btnr')
-const inicolink = document.querySelector('.inico-link');
-const registrarselink = document.querySelector('.registrarse-link');
-const btnpopup = document.querySelector('.btninicio-popup');
-const iconclose = document.querySelector('.icon-close');
-const saludo = document.getElementById('saludo')
-const usuarioinput = document.getElementById('usuario')
-const contraseñainput = document.getElementById('contraseña')
-const recordarmeCheckbox = document.getElementById('recordarme')
-const loginForm = document.querySelector('#loginForm')
 
+/* const respuestasCorrectas = {
+    q1: "Photoshop",
+    q2: "Un dispositivo para dibujar digitalmente",
+    q3: "PNG",
+    q4: "Rojo, Verde, Azul",
+    q5: "Diseño vectorial",
+    q6: "Pincel",
+    q7: "El número de píxeles por pulgada",
+    q8: "Vectoriales",
+    q9: "Combinar capas de diferentes formas",
+    q10: "Una representación visual de un diseño"
+}; */
+/* function checkAnswers() {
+    let correctas = 0;
+    let incorrectas = 0;
 
+    
+    for (let i = 1; i <= 10; i++) {
+        let pregunta = "q" + i;
+        let seleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+        let resultadoSpan = document.getElementById(`resultado-${pregunta}`);
 
-registrarselink.addEventListener('click', ()=> {
-    wrapper.classList.add('active');
-});
+        if (seleccionada) {
+            if (seleccionada.value === respuestasCorrectas[pregunta]) {
+                correctas++;
+                resultadoSpan.innerHTML = " ✅";
+            } else {
+                incorrectas++;
+                resultadoSpan.innerHTML = " ❌";
+            }
+        } else {
+            incorrectas++; 
+            resultadoSpan.innerHTML = " ⁉️";
+        }
+    }
 
-inicolink.addEventListener('click', ()=> {
-    wrapper.classList.remove('active');
-});
-
-btnpopup.addEventListener('click', ()=> {
-    wrapper.classList.add('active-popup');
-});
  
-iconclose.addEventListener('click', ()=> {
-    wrapper.classList.remove('active-popup');
-});
+    let user = JSON.parse(localStorage.setItemItem("user"));
 
-
-//registro
-const formulario = document.querySelector('.registro')
-const username = document.querySelector('.usernamer')
-const password = document.querySelector('.passwordr')
-const email = document.querySelector('.correo')
-
-function registrarUser(e) {
-    e.preventDefault();
-    let user = { 
-        userName: username.value.toLowerCase(),
-        userPass: password.value.toLowerCase(),
-        userEmail: email.value.toLowerCase(),
-        userlogged: false
+    if (correctas >= 8) {
+        alert("🎉 ¡Ganaste! Has respondido correctamente " + correctas + " preguntas.");
+        user.desafios += 1;
+        localStorage.setItem("user", JSON.stringify(user));
+    } else if (incorrectas >= 7) {
+        alert("❌ Has perdido. Demasiados errores. ¡Inténtalo de nuevo!");
     }
-    localStorage.setItem('user', JSON.stringify(user))
-    wrapper.classList.remove('active');
+    actualizarProgreso();
 }
-formulario.addEventListener('submit', registrarUser)
+
+function actualizarProgreso(id, progreso) {
+    let barra = document.getElementById(id);
+    if (barra) {
+        barra.style.width = progreso + "%";
+        barra.setAttribute("aria-valuenow", progreso);
+        barra.innerText = progreso + "%";
+    } else {
+        console.error("❌ Error: No se encontró el elemento #" + id);
+    }
+} */
 
 
-//inicio de sesion 
-function validarUsuario (e){
-e.preventDefault()
-let user = JSON.parse( localStorage.getItem('user'))
+let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-    if(username.value === user.userName && password.value === user.userPass){
-      user.userlogged = true
-      localStorage.setItem("user", JSON.stringify(user))
-      wrapper.classList.remove('active-popup');
+const Formulario = document.querySelector("#quiz-form")
+
+function capturarRespuestas(){
+        
+        const respuesta1 = document.querySelector('input[name="q1"]:checked')?.value;
+        const respuesta2 = document.querySelector('input[name="q2"]:checked')?.value;
+        const respuesta3 = document.querySelector('input[name="q3"]:checked')?.value;
+        const respuesta4 = document.querySelector('input[name="q4"]:checked')?.value;
+        const respuesta5 = document.querySelector('input[name="q5"]:checked')?.value;
+        const respuesta6 = document.querySelector('input[name="q6"]:checked')?.value;
+        const respuesta7 = document.querySelector('input[name="q7"]:checked')?.value;
+        const respuesta8 = document.querySelector('input[name="q8"]:checked')?.value;
+        const respuesta9 = document.querySelector('input[name="q9"]:checked')?.value;
+        const respuesta10 = document.querySelector('input[name="q10"]:checked')?.value;
+        return{
+            p1: respuesta1,
+            p2: respuesta2,
+            p3: respuesta3,
+            p4: respuesta4,
+            p5: respuesta5,
+            p6: respuesta6,
+            p7: respuesta7,
+            p8: respuesta8,
+            p9: respuesta9,
+            p10: respuesta10,
+        }
+
+}
+
+
+function ValidarRespuestas(e){
+    e.preventDefault()
+const respuestasUser = capturarRespuestas()
+const respuestasCorrectas = {
+    p1:"Illustrator",
+    p2:"Un dispositivo para dibujar digitalmente",
+    p3:"PNG",
+    p4:" Rojo, Verde, Azul",
+    p5:"Diseño vectorial",
+    p6: "Pincel",
+    p7: "El número de píxeles por pulgada",
+    p8: "Vectoriales",
+    p9: "Combinar capas de diferentes formas",
+    p10: "Una representación visual de un diseño",
+}
+let acumulado = 0;
+
+const arrayRespuestasUser = Object.values(respuestasUser)
+const arrayRespuestasCorrectas = Object.values(respuestasCorrectas)
+
+//recorrer el array de respuestasUser y el de array respuestasCorrectas y las compara
+for (let i = 0; i < arrayRespuestasUser.length; i++) {
+    if(arrayRespuestasUser[i] == arrayRespuestasCorrectas[i]){
+        acumulado++
+    }
+    
+}
+
+//verifico cuanto lleva el usuario de progreso previo
+
+//condicional de si gane o perdí el examen
+for (let i = 0; i < usuarios.length; i++) {
+    if(acumulado >= 3){
+       alert("ganaste el examen 😁");
+    usuarios[i].progreso += 25
+    localStorage.setItem("usuarios", JSON.stringify(usuarios))
     }else{
-        alert("Usuario o contraseña incorrecta")
+        alert("Debes repetir el examen 😒")
     }
+    }console.log("tu acumulado es:", acumulado)
+
+
+/* for (const key in respuestasCorrectas) {
+    console.log(respuestasCorrectas[key])
+    
+} */
+
 }
-loginForm.addEventListener('submit',validarUsuario)
-
- const btnusuario  = document.querySelector(".Dash")
- const btnregistro  = document.querySelector(".btnpopup")
-
-//saludo
-let user = JSON.parse( localStorage.getItem('user'))
-
-function saludousuario(e){
-    e.preventDefault();
-    let confirmarusuario = user ? user.userlogged : false
-
-    if(confirmarusuario){
-        saludo.textContent = `Hola, ${user.userName}`;
-        wrapper.classList.remove('active-popup');
-        btnusuario.style.display = "flex"
-        btnregistro.style.display = "none"
-    }else{
-        saludo.textContent = ''; 
-        btnusuario.style.display = "none"
-        btnregistro.style.display = "flex"
-    }
-}
-
-document.addEventListener("DOMContentLoaded",saludousuario)
-
-
-//preguntas
-const questions = [
-    { question: "¿Cuál es la capital de Francia?", options: ["Madrid", "París", "Berlín", "Lisboa"], correct: "París" },
-    { question: "¿Cuánto es 2 + 2?", options: ["3", "4", "5", "6"], correct: "4" },
-    { question: "¿Cuál es el océano más grande?", options: ["Atlántico", "Pacífico", "Índico", "Ártico"], correct: "Pacífico" },
-    { question: "¿Quién pintó la Mona Lisa?", options: ["Van Gogh", "Picasso", "Da Vinci", "Rembrandt"], correct: "Da Vinci" },
-    { question: "¿Cuál es el planeta más grande del sistema solar?", options: ["Marte", "Júpiter", "Saturno", "Tierra"], correct: "Júpiter" },
-    { question: "¿En qué año llegó el hombre a la luna?", options: ["1969", "1975", "1980", "1955"], correct: "1969" },
-    { question: "¿Cuál es el metal más abundante en la corteza terrestre?", options: ["Oro", "Plata", "Aluminio", "Hierro"], correct: "Aluminio" },
-    { question: "¿Quién escribió Don Quijote de la Mancha?", options: ["Cervantes", "Lope de Vega", "Góngora", "Quevedo"], correct: "Cervantes" },
-    { question: "¿Cuál es el país con más habitantes?", options: ["EE.UU.", "China", "India", "Rusia"], correct: "China" },
-    { question: "¿Cuál es la molécula del agua?", options: ["CO2", "O2", "H2O", "CH4"], correct: "H2O" }
-  ];
-  
-  document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("quiz-form").addEventListener("submit", function (event) {
-          event.preventDefault();
-          checkAnswers();
-      });
-  });
-  
-  function checkAnswers() {
-      let score = 0;
-      let feedback = "<h3>Resultados:</h3>";
-      
-      questions.forEach((q, index) => {
-          let selected = document.querySelector(`input[name='q${index + 1}']:checked`);
-          if (selected) {
-              if (selected.value === q.correct) {
-                  score++;
-                  feedback += `<p>${q.question}: <span style='color:green;'>Correcto ✅ (${selected.value})</span></p>`;
-              } else {
-                  feedback += `<p>${q.question}: <span style='color:red;'>Incorrecto ❌ (${selected.value})</span> - Respuesta correcta: <strong>${q.correct}</strong></p>`;
-              }
-          } else {
-              feedback += `<p>${q.question}: <span style='color:orange;'>No respondido ⚠️</span> - Respuesta correcta: <strong>${q.correct}</strong></p>`;
-          }
-      });
-      
-      document.getElementById("result").innerHTML = `Obtuviste ${score} de ${questions.length} respuestas correctas.<br>${feedback}`;
-  }
-  
+Formulario.addEventListener("submit", ValidarRespuestas)

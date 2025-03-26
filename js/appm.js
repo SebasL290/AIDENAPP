@@ -44,53 +44,72 @@ function registrarUser(e) {
         userName: username.value.toLowerCase(),
         userPass: password.value.toLowerCase(),
         userEmail: email.value.toLowerCase(),
-        userlogged: false
+        userlogged: false,
+        avatar: "avatar1.png",
+        progreso: 0
     }
-    localStorage.setItem('user', JSON.stringify(user))
+    //enviar información a local storage
+
+    let usuarios = JSON.parse(localStorage.getItem("usuarios"))  || [];
+    for (let i = 0; i < usuarios.length; i++) {
+        if (usuarios[i].userEmail === correo.value) {
+            alert("Este correo ya está registrado. Usa otro o inicia sesión.");
+            formulario.reset();
+            return;
+        }
+    }
+    usuarios.push(user)
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));     
     wrapper.classList.remove('active');
 }
 formulario.addEventListener('submit', registrarUser)
 
 
+let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
 //inicio de sesion 
 function validarUsuario (e){
 e.preventDefault()
-let user = JSON.parse( localStorage.getItem('user'))
-console.log(username.value)
-console.log(password.value)
-console.log("password.value")
-    if(username.value === user.userName && password.value === user.userPass){
-      user.userlogged = true 
+//llamar la información de local storage
+for (let i = 0; i < usuarios.length; i++) {
 
-      localStorage.setItem("user", JSON.stringify(user))
+    if(usuarioinput.value === usuarios[i].userName && contraseñainput.value === usuarios[i].userPass){
+        usuarios[i].userlogged = true
+      localStorage.setItem("usuarios", JSON.stringify(usuarios))
       wrapper.classList.remove('active-popup');
+      saludo.textContent = `Hola, ${usuarios[i].userName}`;
+      wrapper.classList.remove('active-popup');
+      btnusuario.style.display = "flex"
+      btnregistro.style.display = "none"
+      return
+    }}
+    alert("Usuario o contraseña incorrecta")
+    formulario.reset()
     
-    }else{
-        alert("Usuario o contraseña incorrecta")
-    }
 }
 loginForm.addEventListener('submit',validarUsuario)
 
- const btnusuario  = document.querySelector(".Dash")
- const btnregistro  = document.querySelector(".btnpopup")
 
 //saludo
-let user = JSON.parse( localStorage.getItem('user'))
+const btnusuario  = document.querySelector(".Dash")
+const btnregistro  = document.querySelector(".btnpopup")
 
 function saludousuario(e){
-    e.preventDefault();
-    let confirmarusuario = user ? user.userlogged : false
-
+   e.preventDefault();
+   
+   for (let i = 0; i < usuarios.length; i++){
+    let confirmarusuario = usuarios[i] ? usuarios[i].userlogged : false
     if(confirmarusuario){
-        saludo.textContent = `Hola, ${user.userName}`;
-        wrapper.classList.remove('active-popup');
-        btnusuario.style.display = "flex"
-        btnregistro.style.display = "none"
-    }else{
-        saludo.textContent = ''; 
-        btnusuario.style.display = "none"
-        btnregistro.style.display = "flex"
-    }
+       saludo.textContent = `Hola, ${usuarios[i].userName}`;
+       wrapper.classList.remove('active-popup');
+       btnusuario.style.display = "flex"
+       btnregistro.style.display = "none"
+       return
+   }
+}
+saludo.textContent = ''; 
+btnusuario.style.display = "none"
+btnregistro.style.display = "flex"
 }
 
 document.addEventListener("DOMContentLoaded",saludousuario)
