@@ -11,6 +11,21 @@ const usuarioinput = document.querySelector('#usuarioi')
 const contraseñainput = document.getElementById('contraseña')
 const recordarmeCheckbox = document.getElementById('recordarme')
 const loginForm = document.querySelector('#loginForm')
+let stars = document.getElementById('stars');
+let avion = document.getElementById('avion');
+let moon = document.getElementById('moon');
+let mountains_behind = document.getElementById('mountains_behind');
+let mountains_front = document.getElementById('mountains_front');
+
+
+    window.addEventListener('scroll', function (){
+        let value = window.scrollY;
+        stars.style.left = value * 0 + 'px' ;
+        avion.style.left = value * 0.35 + 'px' ;
+        moon.style.top = value * 0.45 + 'px' ;
+        mountains_behind.style.top = value * 0.2 + 'px' ;
+        mountains_front.style.left = value * 0 + 'px' ;
+    })
 
 
 
