@@ -243,6 +243,8 @@ margin-top: 15px;
     text-decoration: underline;
 }
 
+
+
 /* pop-up */
 .sect1{
     filter: blur(0px);
@@ -259,27 +261,45 @@ margin-top: 15px;
     display: none;
 }
 
-
 .popup-caja{
-    border-radius: 10px;
-    padding: 150px 0px 100px 0;
+    border-radius: 20px;
+    padding: 150px 0px 50px 0;
     max-width: 900px;
     min-width: 400px;
     width: 40%;
-    border: 1px solid #888888;
-    box-shadow: 5px 10px 8px #888888;
-    background: linear-gradient(to right, #fc785af0, #d8363a, #AD3636, #7f1b33);;
+    border: 2px solid white;
+    box-shadow: 0 0 30px black;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
     color: rgb(255, 255, 255);
     font-size: 20px;
     flex-direction: column;
     display: flex;
-    margin: 149px auto;
+    margin: 150px auto 0;
+    overflow: hidden;
+    transition:transform .5s ease , height .2s ease;
+    
 }
 
 .Pop-C1{
 display: flex;
 justify-content: end;
 margin: -120px 30px 50px 0;
+}
+
+.sig{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.icon-f{
+    display: none;
+    font-size: 35px;
+    color:#ffffff;
+    cursor: pointer;
 }
 
 .equis{
@@ -307,6 +327,7 @@ margin: -120px 30px 50px 0;
 .pop-text{
     text-align: center;
     margin: 0 10px 0 10px;
+    font-size: 30px;
 }
 
 

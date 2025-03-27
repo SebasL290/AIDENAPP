@@ -60,6 +60,14 @@ function actualizarProgreso(id, progreso) {
 } */
 
 
+const PopUp = document.querySelector(".popup");
+const Sect1 = document.querySelector(".sect1");
+const Equis = document.querySelector(".equis");
+const TextoExa = document.querySelector(".pop-text");
+const TextoSig = document.querySelector(".pop-next")
+const iconF = document.querySelector(".icon-f");
+const BtnExa = document.querySelector(".buttone");
+
 let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
 const Formulario = document.querySelector("#quiz-form")
@@ -125,19 +133,40 @@ for (let i = 0; i < arrayRespuestasUser.length; i++) {
 //condicional de si gane o perdí el examen
 for (let i = 0; i < usuarios.length; i++) {
     if(acumulado >= 3){
-       alert("ganaste el examen 😁");
+    PopUp.style.display = 'flex';
+    iconF.style.display = 'flex';
+    Sect1.style.filter = 'blur(5px)'; 
+    TextoExa.textContent ="Ganaste el examen";
+    TextoSig.style.display = 'flex';
+    BtnExa.style.cursor = 'not-allowed';
     usuarios[i].progreso += 25
     localStorage.setItem("usuarios", JSON.stringify(usuarios))
     }else{
-        alert("Debes repetir el examen 😒")
+        PopUp.style.display = 'flex';
+        iconF.style.display = 'none';
+        Sect1.style.filter = 'blur(5px)';  
+        TextoExa.textContent = "Debes repetir el examen";
+        TextoSig.style.display = 'none';
+        BtnExa.style.cursor = 'not-allowed';
     }
-    }console.log("tu acumulado es:", acumulado)
-
-
-/* for (const key in respuestasCorrectas) {
-    console.log(respuestasCorrectas[key])
-    
-} */
+    }
 
 }
+
 Formulario.addEventListener("submit", ValidarRespuestas)
+
+function QuitarPopUp(){
+    PopUp.style.display = 'none';
+    Sect1.style.filter = 'none'; 
+    BtnExa.style.cursor = 'Pointer';
+     window.location = "../vistas/modulo1.html"
+
+}
+
+Equis.addEventListener('click', QuitarPopUp);
+
+function siguienteMódulo(){
+     window.location = "../vistas/modulo2.html"
+}
+
+iconF.addEventListener('click', siguienteMódulo);
