@@ -87,8 +87,7 @@ display: none;
 }
 
 #container{
-    z-index: 1;
-    position: relative;
+   /*  margin-top: 20%; */
     text-align: right;
    
     font-weight: lighter;
@@ -755,8 +754,6 @@ margin-top: 15px;
 
 
 /* pop up */
-
-
 
 
 
