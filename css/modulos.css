@@ -315,7 +315,7 @@ nav ul i {
     transition-duration: 0.5s;
 }
 
-.btn {
+.btn1 {
     background-color: #FF0A6C;
     border: none;
     color: white;
@@ -325,6 +325,20 @@ nav ul i {
     font-size: 16px;
     margin-bottom: 30px;
 }
+
+.btn {
+    background-color: #FF0A6C;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 30px;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 
 
 footer {

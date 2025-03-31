@@ -1,14 +1,3 @@
-let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-//Ruta protegida por inicio de sesión
-
-const verificar = usuarios.every((item) => item.userLogged === false);
-
-
-for (let i = 0; i < usuarios.length; i++) {
-  if (verificar) {
-    window.location = "../index.html";
-  }
-}
 
 const PopUp = document.querySelector(".popup");
 const Sect1 = document.querySelector(".sect1");
@@ -18,7 +7,7 @@ const TextoSig = document.querySelector(".pop-next")
 const iconF = document.querySelector(".icon-f");
 const BtnExa = document.querySelector(".buttone");
 
-
+let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
 const Formulario = document.querySelector("#quiz-form")
 
@@ -89,7 +78,7 @@ for (let i = 0; i < usuarios.length; i++) {
     TextoExa.textContent ="Ganaste el examen";
     TextoSig.style.display = 'flex';
     BtnExa.style.cursor = 'not-allowed';
-    usuarios[i].progreso1 += 25
+    usuarios[i].progreso3 += 25
     localStorage.setItem("usuarios", JSON.stringify(usuarios))
     }else{
         PopUp.style.display = 'flex';
@@ -120,5 +109,3 @@ function siguienteMódulo(){
 }
 
 iconF.addEventListener('click', siguienteMódulo);
-
-

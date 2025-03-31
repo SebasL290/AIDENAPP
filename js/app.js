@@ -11,6 +11,10 @@ const usuarioinput = document.querySelector('#usuarioi')
 const contraseñainput = document.getElementById('contraseña')
 const recordarmeCheckbox = document.getElementById('recordarme')
 const loginForm = document.querySelector('#loginForm')
+
+
+// movimientos con scroll
+
 let stars = document.getElementById('stars');
 let avion = document.getElementById('avion');
 let moon = document.getElementById('moon');
@@ -28,6 +32,8 @@ let mountains_front = document.getElementById('mountains_front');
     })
 
 
+
+//activar y desactivar pop-up
 
 registrarselink.addEventListener('click', ()=> {
     wrapper.classList.add('active');
@@ -60,7 +66,11 @@ function registrarUser(e) {
         userEmail: email.value.toLowerCase(),
         userlogged: false,
         avatar: "avatar1.png",
-        progreso: 0
+        certificado: false,
+        progreso: 0,
+        progreso1: 0,
+        progreso2: 0,
+        progreso3: 0
     }
     //enviar información a local storage
 
@@ -98,7 +108,7 @@ for (let i = 0; i < usuarios.length; i++) {
       return
     }}
     alert("Usuario o contraseña incorrecta")
-    formulario.reset()
+    loginForm.reset()
     
 }
 loginForm.addEventListener('submit',validarUsuario)

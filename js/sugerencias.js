@@ -45,7 +45,11 @@ function registrarUser(e) {
         userEmail: email.value.toLowerCase(),
         userlogged: false,
         avatar: "avatar1.png",
-        progreso: 0
+        certificado: false,
+        progreso: 0,
+        progreso1: 0,
+        progreso2: 0,
+        progreso3: 0
     }
     //enviar información a local storage
 
@@ -68,25 +72,25 @@ let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
 //inicio de sesion 
 function validarUsuario (e){
-e.preventDefault()
-//llamar la información de local storage
-for (let i = 0; i < usuarios.length; i++) {
-
-    if(usuarioinput.value === usuarios[i].userName && contraseñainput.value === usuarios[i].userPass){
-        usuarios[i].userlogged = true
-      localStorage.setItem("usuarios", JSON.stringify(usuarios))
-      wrapper.classList.remove('active-popup');
-      saludo.textContent = `Hola, ${usuarios[i].userName}`;
-      wrapper.classList.remove('active-popup');
-      btnusuario.style.display = "flex"
-      btnregistro.style.display = "none"
-      return
-    }}
-    alert("Usuario o contraseña incorrecta")
-    formulario.reset()
+    e.preventDefault()
+    //llamar la información de local storage
+    for (let i = 0; i < usuarios.length; i++) {
     
-}
-loginForm.addEventListener('submit',validarUsuario)
+        if(usuarioinput.value === usuarios[i].userName && contraseñainput.value === usuarios[i].userPass){
+            usuarios[i].userlogged = true
+          localStorage.setItem("usuarios", JSON.stringify(usuarios))
+          wrapper.classList.remove('active-popup');
+          saludo.textContent = `Hola, ${usuarios[i].userName}`;
+          wrapper.classList.remove('active-popup');
+          btnusuario.style.display = "flex"
+          btnregistro.style.display = "none"
+          return
+        }}
+        alert("Usuario o contraseña incorrecta")
+        loginForm.reset()
+        
+    }
+    loginForm.addEventListener('submit',validarUsuario)
 
 
 //saludo

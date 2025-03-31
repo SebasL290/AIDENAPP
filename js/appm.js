@@ -8,7 +8,7 @@ const registrarselink = document.querySelector('.registrarse-link');
 const btnpopup = document.querySelector('.btninicio-popup');
 const iconclose = document.querySelector('.icon-close');
 const saludo = document.getElementById('saludo')
-const usuarioinput = document.getElementById('usuario')
+const usuarioinput = document.querySelector('#usuarioi')
 const contraseñainput = document.getElementById('contraseña')
 const recordarmeCheckbox = document.getElementById('recordarme')
 const loginForm = document.querySelector('#loginForm')
@@ -46,7 +46,11 @@ function registrarUser(e) {
         userEmail: email.value.toLowerCase(),
         userlogged: false,
         avatar: "avatar1.png",
-        progreso: 0
+        certificado: false,
+        progreso: 0,
+        progreso1: 0,
+        progreso2: 0,
+        progreso3: 0
     }
     //enviar información a local storage
 
@@ -74,7 +78,7 @@ e.preventDefault()
 for (let i = 0; i < usuarios.length; i++) {
 
     if(usuarioinput.value === usuarios[i].userName && contraseñainput.value === usuarios[i].userPass){
-        usuarios[i].userlogged = true
+    usuarios[i].userlogged = true
       localStorage.setItem("usuarios", JSON.stringify(usuarios))
       wrapper.classList.remove('active-popup');
       saludo.textContent = `Hola, ${usuarios[i].userName}`;
@@ -84,7 +88,7 @@ for (let i = 0; i < usuarios.length; i++) {
       return
     }}
     alert("Usuario o contraseña incorrecta")
-    formulario.reset()
+    loginForm.reset()
     
 }
 loginForm.addEventListener('submit',validarUsuario)
@@ -115,24 +119,25 @@ btnregistro.style.display = "flex"
 document.addEventListener("DOMContentLoaded",saludousuario)
 
 
-//cards
 
-const container = document.querySelector('.desafios-container');
 
-desafios.forEach(desafio => {
-    const card = document.createElement('div');
-    card.classList.add(desafio.id);  
-    card.innerHTML = `
-        <h1>${desafio.titulo}</h1>
-        <h2>${desafio.descripcion}</h2>
-        <button>
-            <a href="${desafio.enlace}">Comenzar</a>
-        </button>
-    `;
-    
-    container.appendChild(card);
-});
+//invalidar desafio
 
+const EXA = document.querySelector(".btn1")
+
+function Invalidardesafios (){
+    for (let i = 0; i < usuarios.length; i++) {
+        if(usuarios[i].userLogged && usuarios[i].progreso >= 25 ){
+            EXA.style.cursor = "pointer"
+            EXA.style.pointerEvents = "all"
+            btn.style.color = "#FF0A6C";
+            return
+            }
+        }
+
+        
+        }
+ document.addEventListener('DOMContentLoaded',Invalidardesafios);
 
 
 

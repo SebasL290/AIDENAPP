@@ -1,7 +1,44 @@
+let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+const nombre = document.querySelector("#user-name")
+
+function nombre1() {
+    for (let i = 0; i < usuarios.length; i++) {
+      if(usuarios[i].userlogged){
+        nombre.textContent = `${usuarios[i].userName}`;
+      }
+      
+    }
+  }
+
+  nombre1()
+
+const BarraG = document.querySelector("#general");
+const Barra1 = document.querySelector("#barra1");
+const Barra2 = document.querySelector("#barra2");
+const Barra3 = document.querySelector("#barra3");
+
+function barras() {
+  for (let i = 0; i < usuarios.length; i++) {
+    if(usuarios[i].userlogged){
+    BarraG.style.width = `${usuarios[i].progreso}%`;
+    BarraG.textContent = `${usuarios[i].progreso}%`;
+    Barra1.style.width = `${usuarios[i].progreso1}%`;
+    Barra1.textContent = `${usuarios[i].progreso1}%`;
+    Barra2.style.width = `${usuarios[i].progreso2}%`;
+    Barra2.textContent = `${usuarios[i].progreso2}%`;
+    Barra3.style.width = `${usuarios[i].progreso3}%`;
+    Barra3.textContent = `${usuarios[i].progreso3}%`;
+    }
+  }
+}
+barras()
+
+
+
+
 //cerrar sesion
 const btncerrars = document.querySelector('#btn1')
-
-let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
 function cerrarSesion (){
 
