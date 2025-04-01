@@ -78,6 +78,7 @@ for (let i = 0; i < usuarios.length; i++) {
     TextoExa.textContent ="Ganaste el examen";
     TextoSig.style.display = 'flex';
     BtnExa.style.cursor = 'not-allowed';
+    usuarios[i].progreso += 7;
     usuarios[i].progreso2 += 25
     localStorage.setItem("usuarios", JSON.stringify(usuarios))
     }else{
@@ -98,7 +99,7 @@ function QuitarPopUp(){
     PopUp.style.display = 'none';
     Sect1.style.filter = 'none'; 
     BtnExa.style.cursor = 'Pointer';
-     window.location = "../vistas/modulo1.html"
+     window.location = "../vistas/modulo2-2.html"
 
 }
 

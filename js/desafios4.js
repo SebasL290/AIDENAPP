@@ -78,6 +78,7 @@ for (let i = 0; i < usuarios.length; i++) {
     TextoExa.textContent ="Ganaste el examen";
     TextoSig.style.display = 'flex';
     BtnExa.style.cursor = 'not-allowed';
+    usuarios[i].progreso += 7;
     usuarios[i].progreso1 += 25
     localStorage.setItem("usuarios", JSON.stringify(usuarios))
     }else{

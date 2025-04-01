@@ -78,6 +78,7 @@ for (let i = 0; i < usuarios.length; i++) {
     TextoExa.textContent ="Ganaste el examen";
     TextoSig.style.display = 'flex';
     BtnExa.style.cursor = 'not-allowed';
+    usuarios[i].progreso += 11;
     usuarios[i].progreso3 += 25
     localStorage.setItem("usuarios", JSON.stringify(usuarios))
     }else{
@@ -98,14 +99,14 @@ function QuitarPopUp(){
     PopUp.style.display = 'none';
     Sect1.style.filter = 'none'; 
     BtnExa.style.cursor = 'Pointer';
-     window.location = "../vistas/modulo1.html"
+     window.location = "../vistas/modulo3-1.html"
 
 }
 
 Equis.addEventListener('click', QuitarPopUp);
 
 function siguienteMódulo(){
-     window.location = "../vistas/modulo2.html"
+     window.location = "../vistas/modulo3-2.html"
 }
 
 iconF.addEventListener('click', siguienteMódulo);

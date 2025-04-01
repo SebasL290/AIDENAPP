@@ -89,6 +89,7 @@ for (let i = 0; i < usuarios.length; i++) {
     TextoExa.textContent ="Ganaste el examen";
     TextoSig.style.display = 'flex';
     BtnExa.style.cursor = 'not-allowed';
+    usuarios[i].progreso = +7;
     usuarios[i].progreso1 += 25
     localStorage.setItem("usuarios", JSON.stringify(usuarios))
     }else{
@@ -116,7 +117,7 @@ function QuitarPopUp(){
 Equis.addEventListener('click', QuitarPopUp);
 
 function siguienteMódulo(){
-     window.location = "../vistas/modulo2.html"
+     window.location = "../vistas/modulo1.html"
 }
 
 iconF.addEventListener('click', siguienteMódulo);

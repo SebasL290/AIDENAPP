@@ -123,14 +123,13 @@ document.addEventListener("DOMContentLoaded",saludousuario)
 
 //invalidar desafio
 
-const EXA = document.querySelector(".btn1")
+const EXA = document.querySelector(".btn")
 
 function Invalidardesafios (){
     for (let i = 0; i < usuarios.length; i++) {
-        if(usuarios[i].userLogged && usuarios[i].progreso >= 25 ){
+        if(usuarios[i].userlogged && usuarios[i].progreso1 >= 25 ){
             EXA.style.cursor = "pointer"
             EXA.style.pointerEvents = "all"
-            btn.style.color = "#FF0A6C";
             return
             }
         }
@@ -138,6 +137,7 @@ function Invalidardesafios (){
         
         }
  document.addEventListener('DOMContentLoaded',Invalidardesafios);
+
 
 
 
