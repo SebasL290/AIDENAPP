@@ -94,6 +94,7 @@ let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 //inicio de sesion 
 function validarUsuario (e){
 e.preventDefault()
+let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 //llamar la información de local storage
 for (let i = 0; i < usuarios.length; i++) {
 

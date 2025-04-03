@@ -74,6 +74,7 @@ let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 //inicio de sesion 
 function validarUsuario (e){
 e.preventDefault()
+let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 //llamar la información de local storage
 for (let i = 0; i < usuarios.length; i++) {
 
@@ -123,27 +124,80 @@ document.addEventListener("DOMContentLoaded",saludousuario)
 
 //invalidar desafio
 
-const EXA = document.querySelector(".btn")
 
-function Invalidardesafios (){
+
+//modulo1
+
+const EXA2 = document.querySelector(".btn2")
+const EXA3 = document.querySelector(".btn3")
+const EXA4 = document.querySelector(".btn4")
+
+function Invalidardesafiosm1 (){
     for (let i = 0; i < usuarios.length; i++) {
-        if(usuarios[i].userlogged && usuarios[i].progreso1 >= 25 ){
-            EXA.style.cursor = "pointer"
-            EXA.style.pointerEvents = "all"
+        if(usuarios[i].userlogged && ( usuarios[i].progreso1 >= 25 && usuarios[i].progreso1 <50 ) ){
+            EXA2.style.cursor = "pointer"
+            EXA2.style.pointerEvents = "all"
             return
+            }else if(usuarios[i].userlogged && ( usuarios[i].progreso1 >= 50 && usuarios[i].progreso1 <75) ){
+            EXA3.style.cursor = "pointer"
+            EXA3.style.pointerEvents = "all"
+                return
+            }else if(usuarios[i].userlogged && ( usuarios[i].progreso1 >= 75 && usuarios[i].progreso1 <=100) ){
+            EXA4.style.cursor = "pointer"
+            EXA4.style.pointerEvents = "all"
+                return
             }
         }
-
-        
         }
- document.addEventListener('DOMContentLoaded',Invalidardesafios);
+ document.addEventListener('DOMContentLoaded',Invalidardesafiosm1);
 
 
+ const EXA6 = document.querySelector(".btn6")
+ const EXA7 = document.querySelector(".btn7")
+ const EXA8 = document.querySelector(".btn8")
+
+ function Invalidardesafiosm2 (){
+    for (let i = 0; i < usuarios.length; i++) {
+        if(usuarios[i].userlogged && ( usuarios[i].progreso2 >= 25 && usuarios[i].progreso2 <50 ) ){
+            EXA6.style.cursor = "pointer"
+            EXA6.style.pointerEvents = "all"
+            return
+            }else if(usuarios[i].userlogged && ( usuarios[i].progreso2 >= 50 && usuarios[i].progreso2 <75) ){
+            EXA7.style.cursor = "pointer"
+            EXA7.style.pointerEvents = "all"
+                return
+            }else if(usuarios[i].userlogged && ( usuarios[i].progreso2 >= 75 && usuarios[i].progreso2 <=100) ){
+            EXA8.style.cursor = "pointer"
+            EXA8.style.pointerEvents = "all"
+                return
+            }
+        }
+        }
+ document.addEventListener('DOMContentLoaded',Invalidardesafiosm2);
 
 
+ const EXA10 = document.querySelector(".btn10")
+ const EXA11 = document.querySelector(".btn11")
+ const EXA12 = document.querySelector(".btn12")
 
-
-
+ function Invalidardesafiosm3 (){
+    for (let i = 0; i < usuarios.length; i++) {
+        if(usuarios[i].userlogged && ( usuarios[i].progreso3 >= 25 && usuarios[i].progreso3 <50 ) ){
+            EXA10.style.cursor = "pointer"
+            EXA10.style.pointerEvents = "all"
+            return
+            }else if(usuarios[i].userlogged && ( usuarios[i].progreso3 >= 50 && usuarios[i].progreso3 <75) ){
+            EXA11.style.cursor = "pointer"
+            EXA11.style.pointerEvents = "all"
+                return
+            }else if(usuarios[i].userlogged && ( usuarios[i].progreso3 >= 75 && usuarios[i].progreso3 <=100) ){
+            EXA12.style.cursor = "pointer"
+            EXA12.style.pointerEvents = "all"
+                return
+            }
+        }
+        }
+ document.addEventListener('DOMContentLoaded',Invalidardesafiosm3);
 
 
 

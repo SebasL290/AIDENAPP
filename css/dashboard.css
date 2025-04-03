@@ -162,6 +162,17 @@ nav ul {
     margin-top: 70px;
 
   }
+  .btn2{
+    font-family: 'LEMONMILK';
+    background-color: #383838;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 70px;
+
+  }
 /* footer */
 
 footer {

@@ -35,6 +35,25 @@ function barras() {
 barras()
 
 
+//certificado
+const certificado = document.querySelector('#btn2')
+
+function activarDescarga() {
+  for (let i = 0; i < usuarios.length; i++) {
+    if (usuarios[i].userlogged && usuarios[i].progreso === 100) {
+      /* BtnDescargar.style.cursor = 'pointer!important'; */
+      btn2.style.background = "#FF0A6C";
+      btn2.disabled = false;
+      usuarios[i].certificado = true
+        localStorage.setItem("usuarios", JSON.stringify(usuarios))
+      return
+    }
+  }
+
+}
+
+document.addEventListener("DOMContentLoaded", activarDescarga);
+
 
 
 //cerrar sesion

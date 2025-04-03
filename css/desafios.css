@@ -8,6 +8,9 @@ body {
     src: url("../sources/fonts//LEMONMILK-Medium.otf");
     src: url("../sources/fonts/LEMONMIL-Regular.otf")
 }
+.enlace{
+    text-decoration: none;
+    }
 
 /* menu */
 nav {

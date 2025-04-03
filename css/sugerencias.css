@@ -41,6 +41,9 @@ body {
   font-size: 16px;
   margin-top: 20px;
 }
+.enlace{
+  text-decoration: none;
+  }
 
 .btn-custom:hover {
     background-color: #FF0A6C}

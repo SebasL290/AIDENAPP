@@ -8,6 +8,9 @@ body {
     overflow-x: hidden;      
     
 }
+.enlace{
+    text-decoration: none;
+    }
 
 
 nav {  
@@ -315,18 +318,18 @@ nav ul i {
     transition-duration: 0.5s;
 }
 
-.boton1 {
+.open {
     background-color: #FF0A6C;
     border: none;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
     margin-bottom: 30px;
+    text-decoration: none;
 }
 
-.btn {
+.close {
     background-color: #FF0A6C;
     border: none;
     color: white;
@@ -335,11 +338,51 @@ nav ul i {
     cursor: pointer;
     font-size: 16px;
     margin-bottom: 30px;
-    cursor: not-allowed;
+    text-decoration: none;
     pointer-events: none;
+     text-decoration: none;
 }
 
 
+.btn1{
+    cursor: pointer;
+}
+.btn2{
+    cursor: not-allowed;
+    
+}
+.btn3{
+    cursor: not-allowed;
+    
+}
+.btn4{
+    cursor: not-allowed;
+
+}
+.btn5{
+    cursor: pointer;
+}
+.btn6{
+    cursor: not-allowed;
+}
+.btn7{
+    cursor: not-allowed;
+}
+.btn8{
+    cursor: not-allowed;
+}
+.btn9{
+    cursor: pointer;
+}
+.btn10{
+    cursor: not-allowed;
+}
+.btn11{
+    cursor: not-allowed;
+}
+.btn12{
+    cursor: not-allowed;
+}
 
 footer {
     background-color: #2B2159; 

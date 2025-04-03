@@ -11,6 +11,9 @@ body {
     position: static;
 
 }
+.enlace{
+text-decoration: none;
+}
 
 #header {
     padding: 10px 20px;
