@@ -106,7 +106,7 @@ function QuitarPopUp(){
 Equis.addEventListener('click', QuitarPopUp);
 
 function siguienteMódulo(){
-     window.location = "../vistas/modulo2.html"
+     window.location = "../vistas/modulo3.html"
 }
 
 iconF.addEventListener('click', siguienteMódulo);
