@@ -167,6 +167,16 @@ nav ul i {
     color: #fffefe;
     
 }
+.cerrar{ 
+    font-family: 'LEMONMILK';
+    background-color: #FF0A6C;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+
+}
 
 
 .barra ul {

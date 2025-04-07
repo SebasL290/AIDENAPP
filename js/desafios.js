@@ -122,4 +122,19 @@ function siguienteMódulo(){
 
 iconF.addEventListener('click', siguienteMódulo);
 
+//cerrar sesion menu
+const btncerrarmenu = document.querySelector('.cerrar')
+
+function cerrarSesion (){
+
+    for (let i = 0; i < usuarios.length; i++) {
+    if(usuarios[i].userlogged){
+        usuarios[i].userlogged = false
+        localStorage.setItem("usuarios", JSON.stringify(usuarios))
+        window.location = "../index.html"}
+    }
+    }
+    
+    btncerrarmenu.addEventListener("click",cerrarSesion)
+
 

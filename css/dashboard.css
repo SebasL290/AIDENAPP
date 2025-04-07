@@ -107,6 +107,16 @@ nav ul {
   padding: 0;
   font-family: "LEMONMILK";
 }   
+.cerrar{ 
+  font-family: 'LEMONMILK';
+  background-color: #FF0A6C;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+
+}
 
 
 /* body */
