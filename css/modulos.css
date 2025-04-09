@@ -13,12 +13,13 @@ body {
     }
 
 
-nav {  
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
+    nav {  
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
 #usuario {
     background: none;
     color: white;
@@ -181,11 +182,10 @@ nav ul i {
 
 .barra ul {
     list-style: none;
-    padding: 0;
-    margin: 0px 0;
     display: flex;
-    align-items: flex-start;
-    margin-left: 67px;
+    justify-content: center;
+    align-items: center;
+   
 
 }
 
