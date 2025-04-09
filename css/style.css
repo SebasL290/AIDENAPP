@@ -321,53 +321,77 @@ nav ul i {
 
 }
 
+
+.down{
+    background-color: #4c045b;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    text-decoration: none;
+
+}
+
+.comenzar {
+    font-family: 'LEMONMILK';
+    background-color: #FF0A6C;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+
+.mission0 h6{
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.mission1 h6{
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.mission2 h6{
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+
+.mission0 a{
+color: #fff;
+text-decoration: none;
+}
+.mission1 a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.mission2 a{
+    color: #fff;
+    text-decoration: none;
+}
+
 .img-card0 {
     top: -70px;
     position: absolute;
     width: 200px;
     height: 200px;
 }
-
-.mission0 button {
-    font-family: 'LEMONMILK';
-    background-color: #FF0A6C;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 70px;
-}
-
-.mission0 a{
-color: #fff;
-}
-
 .img-card1 {
     top: -70px;
     position: absolute;
     width: 200px;
     height: 200px;
 }
-
-.mission1 button {
-    font-family: 'LEMONMILK';
-    background-color: #FF0A6C;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 70px;
-}
-
-.mission1 a{
-    color: #fff;
-    }
-    
-
 .img-card2{
     top: -70px;
     position: absolute;
@@ -376,23 +400,6 @@ color: #fff;
     
 }
 
-.mission2 button {
-    font-family: 'LEMONMILK';
-    background-color: #FF0A6C;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 70px;
-
-}
-
-.mission2 a{
-    color: #fff;
-    }
-    
 
 .mission0:hover{
     transform: scale(1.1);

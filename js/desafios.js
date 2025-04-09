@@ -78,7 +78,6 @@ for (let i = 0; i < arrayRespuestasUser.length; i++) {
     
 }
 
-//verifico cuanto lleva el usuario de progreso previo
 
 //condicional de si gane o perdí el examen
 for (let i = 0; i < usuarios.length; i++) {

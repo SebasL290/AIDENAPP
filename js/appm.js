@@ -124,8 +124,6 @@ document.addEventListener("DOMContentLoaded",saludousuario)
 
 //invalidar desafio
 
-
-
 //modulo1
 
 const EXA2 = document.querySelector(".btn2")
@@ -199,6 +197,7 @@ function Invalidardesafiosm1 (){
         }
  document.addEventListener('DOMContentLoaded',Invalidardesafiosm3);
 
+
  //cerrar sesion menu
 const btncerrarmenu = document.querySelector('.cerrar')
 
@@ -213,6 +212,25 @@ function cerrarSesion (){
     }
     
     btncerrarmenu.addEventListener("click",cerrarSesion)
+
+
+//ocultar contenido
+const ocultarc = document.querySelector('.contenido')
+
+function ocultar (){
+    for (let i = 0; i < usuarios.length; i++){
+        let confirmarusuario = usuarios[i] ? usuarios[i].userlogged : false
+        if(confirmarusuario){
+            ocultarc.style.filter = "none"
+        return
+       }
+    }
+    ocultarc.style.filter = "blur(10px)"
+    
+}
+
+ocultar()
+
 
 
 
