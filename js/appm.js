@@ -86,6 +86,8 @@ for (let i = 0; i < usuarios.length; i++) {
       wrapper.classList.remove('active-popup');
       btnusuario.style.display = "flex"
       btnregistro.style.display = "none"
+      ocultarc.style.filter = "none"
+      PopUp.style.display = 'none';
       return
     }}
     alert("Usuario o contraseña incorrecta")
@@ -216,20 +218,33 @@ function cerrarSesion (){
 
 //ocultar contenido
 const ocultarc = document.querySelector('.contenido')
+const PopUp = document.querySelector(".popup");
+const Sect1 = document.querySelector(".sect1");
+const boton = document.querySelector(".boton");
+const TextoExa = document.querySelector(".pop-text");
+const TextoSig = document.querySelector(".pop-next")
+const iconF = document.querySelector(".icon-f");
+const BtnExa = document.querySelector(".buttone");
 
 function ocultar (){
     for (let i = 0; i < usuarios.length; i++){
         let confirmarusuario = usuarios[i] ? usuarios[i].userlogged : false
         if(confirmarusuario){
-            ocultarc.style.filter = "none"
+        ocultarc.style.filter = "none"
         return
        }
     }
-    ocultarc.style.filter = "blur(10px)"
-    
+    ocultarc.style.filter = "blur(8px)"
+    PopUp.style.display = 'flex';
+  
 }
-
 ocultar()
+
+/* function QuitarPopUp(){
+    window.location = "../index.html"
+
+}
+boton.addEventListener('click', QuitarPopUp); */
 
 
 
