@@ -97,6 +97,14 @@ section img#mountains_front
     background-color: #1c0522;
 }
 
+#seccion2
+{
+    position: relative;
+    margin-top: -92px;
+    padding: 100px;
+    background-color: #1c0522;
+}
+
 .Dash{
 display: none;
 }
