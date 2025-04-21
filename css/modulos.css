@@ -163,17 +163,15 @@ nav ul i {
     color: #fffefe;
     
 }
-.cerrar{ 
+.cerrar {
     font-family: 'LEMONMILK';
     background-color: #FF0A6C;
     border: none;
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 10px;
-
+    font-size: 14px;
 }
-
 
 
 .barra ul {
@@ -444,15 +442,16 @@ margin-top: 15px;
     color: inherit;
     text-decoration: none;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     width: 150px;
+    flex-direction: column;
+    padding: 5px 20px; 
     max-width: 200px;
-    padding: 10px 20px;
     font-variant: small-caps;
     text-shadow: 1px 1px black;
+    align-items: flex-end;
     font-family: "LEMONMILK";
 }
+
 
 .respmenu li {
     margin-top: 5px;
