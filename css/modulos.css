@@ -297,6 +297,7 @@ nav ul i {
     width: 380px;
     height: 511px;
     color: whitesmoke;
+    filter: grayscale(1) brightness(0.5);
 
 }
 .desafio1 h5{

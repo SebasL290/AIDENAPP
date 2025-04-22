@@ -124,17 +124,20 @@ document.addEventListener("DOMContentLoaded",saludousuario)
 
 
 
-
-
 //modulo1
-document.addEventListener('DOMContentLoaded',function(){
+
+const EXA1 = document.querySelector(".btn1")
 const EXA2 = document.querySelector(".btn2")
 const EXA3 = document.querySelector(".btn3")
 const EXA4 = document.querySelector(".btn4")
-const tarjeta = document.querySelector(".desafio2")
+const EXA5 = document.querySelector(".btn5")
+const EXA9 = document.querySelector(".btn9")
 
-EXA3.parentElement.offsetParent.style.filter = "grayscale(1) brightness(0.5)" 
-EXA4.parentElement.offsetParent.style.filter = "grayscale(1) brightness(0.5)" 
+
+EXA1.parentElement.offsetParent.style.filter = "grayscale(0) brightness(1)" 
+EXA5.parentElement.offsetParent.style.filter = "grayscale(0) brightness(1)" 
+EXA9.parentElement.offsetParent.style.filter = "grayscale(0) brightness(1)" 
+
 
 
 function Invalidardesafiosm1 (){
@@ -142,34 +145,33 @@ function Invalidardesafiosm1 (){
         if(usuarios[i].userlogged && ( usuarios[i].progreso1 >= 25 && usuarios[i].progreso1 <50 ) ){
             EXA2.style.cursor = "pointer"
             EXA2.style.pointerEvents = "all"
-            tarjeta.style.filter = "grayscale(0) brightness(1)"            
+                   
             return
             }else if(usuarios[i].userlogged && ( usuarios[i].progreso1 >= 50 && usuarios[i].progreso1 <75) ){
             EXA3.style.cursor = "pointer"
             EXA3.style.pointerEvents = "all"
+            
                
-                return
+            return
             }else if(usuarios[i].userlogged && ( usuarios[i].progreso1 >= 75 && usuarios[i].progreso1 <=100) ){
             EXA4.style.cursor = "pointer"
             EXA4.style.pointerEvents = "all"
+               
                 return
             }
         }
         }
         Invalidardesafiosm1()
-});
+
 
 
  //modulo2
- document.addEventListener('DOMContentLoaded',function(){
+
 
     const EXA6 = document.querySelector(".btn6")
     const EXA7 = document.querySelector(".btn7")
     const EXA8 = document.querySelector(".btn8")
    
-   EXA6.parentElement.offsetParent.style.filter = "grayscale(1) brightness(0.5)" 
-   EXA7.parentElement.offsetParent.style.filter = "grayscale(1) brightness(0.5)" 
-   EXA8.parentElement.offsetParent.style.filter = "grayscale(1) brightness(0.5)" 
    
     function Invalidardesafiosm2 (){
        for (let i = 0; i < usuarios.length; i++) {
@@ -189,21 +191,15 @@ function Invalidardesafiosm1 (){
            }
            }
 
-           Invalidardesafiosm2()
- })
+Invalidardesafiosm2()
 
 
  //modulo3
- document.addEventListener('DOMContentLoaded',function(){
+
     
  const EXA10 = document.querySelector(".btn10")
  const EXA11 = document.querySelector(".btn11")
  const EXA12 = document.querySelector(".btn12")
-
-
-EXA10.parentElement.offsetParent.style.filter = "grayscale(1) brightness(0.5)" 
-EXA11.parentElement.offsetParent.style.filter = "grayscale(1) brightness(0.5)" 
-EXA12.parentElement.offsetParent.style.filter = "grayscale(1) brightness(0.5)" 
 
 
  function Invalidardesafiosm3 (){
@@ -225,7 +221,7 @@ EXA12.parentElement.offsetParent.style.filter = "grayscale(1) brightness(0.5)"
         }
     Invalidardesafiosm3()
     
- });
+
 
 
 
