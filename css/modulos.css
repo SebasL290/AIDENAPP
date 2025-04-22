@@ -60,6 +60,17 @@ nav ul i {
 
 }
 
+.titulitog{
+    font-family: "LEMONMILK";
+}
+
+.titulitop{
+    font-family: "LEMONMILK";
+   display: flex;
+   
+    
+}
+
 
 
 @media(max-width:576px){
@@ -151,6 +162,9 @@ nav ul:first-child {
     
 }
 
+ol, ul {
+    padding-left: 0 !important;
+}
 nav ul:last-child {
     cursor: pointer;
     justify-content: flex-end;
@@ -171,24 +185,39 @@ nav ul i {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+    display: flex;
+ 
 }
 
 
 .barra ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
-   
-
+    justify-content: start;
 }
 
 .barra ul li {
-    margin: 0 30px;
-    
+    margin: 0 30px 0 0;
 }
 
-.barra ul li a {
+.barra1  {
+  
+
+    align-items: flex-start;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #a08fb0;
+    border-color: #2B2159;
+    border: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.barra1:hover {
+    background-color: #211328;
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+.barra2  {
     align-items: flex-start;
     text-decoration: none;
     color: #FFFFFF;
@@ -198,12 +227,16 @@ nav ul i {
     padding: 10px 20px;
     border-radius: 5px;
 }
-.barra ul li a:hover {
+.barra2:hover {
     background-color: #a08fb0;
     transform: scale(1.1); 
     cursor: pointer;
-
+   
 }
+
+
+
+
 
 .video-section {
     margin: 30px 0;
@@ -764,7 +797,7 @@ header {
     width: 100%;
     min-height: 65vh;
     margin: auto;
-    top: 450px;
+    top: 490px;
     display: none;
 }
 

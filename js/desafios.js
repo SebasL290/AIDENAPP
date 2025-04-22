@@ -86,6 +86,7 @@ for (let i = 0; i < usuarios.length; i++) {
     iconF.style.display = 'flex';
     Sect1.style.filter = 'blur(5px)'; 
     TextoExa.textContent ="Ganaste el examen";
+    
     TextoSig.style.display = 'flex';
     BtnExa.style.cursor = 'not-allowed';
     usuarios[i].progreso = +7;

@@ -216,6 +216,9 @@ function cerrarSesion (){
     btncerrarmenu.addEventListener("click",cerrarSesion)
 
 
+
+
+
 //ocultar contenido
 const ocultarc = document.querySelector('.contenido')
 const PopUp = document.querySelector(".popup");
@@ -245,6 +248,25 @@ ocultar()
 
 }
 boton.addEventListener('click', QuitarPopUp); */
+
+//cerrar sesion 
+
+const osesion = document.querySelector(".cerrar")
+
+function sesion(){
+    
+    for (let i = 0; i < usuarios.length; i++){
+     let confirmarusuario = usuarios[i] ? usuarios[i].userlogged : false
+     if(confirmarusuario){
+      osesion.style.display = "flex"
+        return
+    }
+ }
+ osesion.style.display = "none"
+ }
+ 
+ document.addEventListener("DOMContentLoaded", sesion)
+ 
 
 
 
