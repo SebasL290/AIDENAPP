@@ -65,10 +65,13 @@ nav ul i {
 }
 
 .titulitop{
-    font-family: "LEMONMILK";
-   display: flex;
-   
-    
+   font-family: "LEMONMILK";
+   margin: 28px 0;
+   font-size: 1em;
+   background: #a08fb0;
+   padding: 8px;
+   border-radius: 3px;
+       
 }
 
 
@@ -318,6 +321,8 @@ nav ul i {
     width: 380px;
     height: 511px;
     color: whitesmoke;
+    filter: grayscale(1) brightness(0.5);
+    
 
 }
 .desafio2 h5{
@@ -328,29 +333,6 @@ nav ul i {
     font-size: 12px;
 }
 .desafio2:hover{
-    transform: scale(1.1); 
-    transition-duration: 0.5s;
-}
-
-.desafio3 {
-    background-image: url(../sources/images/desafio3.png);
-    background-size: cover;
-    padding: 20px;
-    border-radius: 20px;
-    text-align: center;
-    width: 380px;
-    height: 511px;
-    color: whitesmoke;
-
-}
-.desafio3 h5{
-    padding-top: 300px;
-    font-family: "LEMONMILK";
-}
-.desafio3 p{
-    font-size: 12px;
-}
-.desafio3:hover{
     transform: scale(1.1); 
     transition-duration: 0.5s;
 }
@@ -797,7 +779,7 @@ header {
     width: 100%;
     min-height: 65vh;
     margin: auto;
-    top: 490px;
+    top: 600px;
     display: none;
 }
 
