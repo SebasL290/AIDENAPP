@@ -19,118 +19,158 @@
 
     <h2>DESAFÍO 1</h2>
     
-    <div class="popup">
-        <div class="popup-caja">
-          <div class="Pop-C1">
-              <i class="fa-solid fa-xmark equis"></i>
-          </div>
-          <div class="Pop-C2">
-          <p class="pop-text"></p>
-          <div class="sig">
-            <p class="pop-next">Siguiente módulo</p>
-          <i class="fa-solid fa-circle-chevron-down icon-f"></i>
-        </div>
-        </div>
-        </div>
-      </div>
+    <section class="sect1">
+        <div class="container1">
+            <div class="container mt-5 quiz-container">
+              <div id="questionCarousel" class="carousel slide" data-bs-interval="false">
+                  <div class="carousel-inner">
+      
+                      <form class="exa" id="formulario">
 
-    <div class="quiz-container">
-        <h1 class="quiz-title">Prueba de Conocimientos - Arte Digital 🎨</h1>
-        <form id="quiz-form" class="sect1" >
-            <div class="quiz-question">
-                <p>1️⃣ ¿Qué software es más utilizado para la ilustración digital?</p>
-                <label><input type="radio" name="q1" value="Photoshop"> Photoshop</label>
-                <label><input type="radio" name="q1" value="Illustrator"> Illustrator</label>
-                <label><input type="radio" name="q1" value="Blender"> Blender</label>
-                <label><input type="radio" name="q1" value="After Effects"> After Effects</label>
-                <span id="resultado-q1"></span>
-            </div>
-    
-            <div class="quiz-question">
-                <p>2️⃣ ¿Qué es una tableta gráfica?</p>
-                <label><input type="radio" name="q2" value="Un software de diseño"> Un software de diseño</label>
-                <label><input type="radio" name="q2" value="Un dispositivo para dibujar digitalmente"> Un dispositivo para dibujar digitalmente</label>
-                <label><input type="radio" name="q2" value="Un tipo de pintura digital"> Un tipo de pintura digital</label>
-                <label><input type="radio" name="q2" value="Un tipo de pantalla"> Un tipo de pantalla</label>
-                <span id="resultado-q2"></span>
-            </div>
-    
-            <div class="quiz-question">
-                <p>3️⃣ ¿Cuál es el formato de imagen que admite transparencias?</p>
-                <label><input type="radio" name="q3" value="JPG"> JPG</label>
-                <label><input type="radio" name="q3" value="PNG"> PNG</label>
-                <label><input type="radio" name="q3" value="GIF"> GIF</label>
-                <label><input type="radio" name="q3" value="BMP"> BMP</label>
-                <span id="resultado-q3"></span>
-            </div>
-    
-            <div class="quiz-question">
-                <p>4️⃣ ¿Qué significa la sigla RGB en diseño digital?</p>
-                <label><input type="radio" name="q4" value="Rojo, Gris, Beige"> Rojo, Gris, Beige</label>
-                <label><input type="radio" name="q4" value="Rojo, Verde, Azul"> Rojo, Verde, Azul</label>
-                <label><input type="radio" name="q4" value="Rápido, Grueso, Bajo"> Rápido, Grueso, Bajo</label>
-                <label><input type="radio" name="q4" value="Real Graphic Balance"> Real Graphic Balance</label>
-                <span id="resultado-q4"></span>
-            </div>
-    
-            <div class="quiz-question">
-                <p>5️⃣ ¿Para qué se usa Adobe Illustrator?</p>
-                <label><input type="radio" name="q5" value="Modelado 3D"> Modelado 3D</label>
-                <label><input type="radio" name="q5" value="Diseño vectorial"> Diseño vectorial</label>
-                <label><input type="radio" name="q5" value="Edición de video"> Edición de video</label>
-                <label><input type="radio" name="q5" value="Composición musical"> Composición musical</label>
-                <span id="resultado-q5"></span>
-            </div>
-    
-            <div class="quiz-question">
-                <p>6️⃣ ¿Qué herramienta se usa para dibujar en Photoshop?</p>
-                <label><input type="radio" name="q6" value="Pincel"> Pincel</label>
-                <label><input type="radio" name="q6" value="Texto"> Texto</label>
-                <label><input type="radio" name="q6" value="Recorte"> Recorte</label>
-                <label><input type="radio" name="q6" value="Lupa"> Lupa</label>
-                <span id="resultado-q6"></span>
-            </div>
-    
-            <div class="quiz-question">
-                <p>7️⃣ ¿Qué es la resolución de una imagen?</p>
-                <label><input type="radio" name="q7" value="El tamaño del archivo"> El tamaño del archivo</label>
-                <label><input type="radio" name="q7" value="El número de píxeles por pulgada"> El número de píxeles por pulgada</label>
-                <label><input type="radio" name="q7" value="La cantidad de colores"> La cantidad de colores</label>
-                <label><input type="radio" name="q7" value="El brillo de la imagen"> El brillo de la imagen</label>
-                <span id="resultado-q7"></span>
-            </div>
-    
-            <div class="quiz-question">
-                <p>8️⃣ ¿Qué tipo de gráficos no pierden calidad al escalarse?</p>
-                <label><input type="radio" name="q8" value="Bitmap"> Bitmap</label>
-                <label><input type="radio" name="q8" value="Vectoriales"> Vectoriales</label>
-                <label><input type="radio" name="q8" value="Pixelados"> Pixelados</label>
-                <label><input type="radio" name="q8" value="Rasterizados"> Rasterizados</label>
-                <span id="resultado-q8"></span>
-            </div>
-    
-            <div class="quiz-question">
-                <p>9️⃣ ¿Cuál es el propósito del "Modo de Fusión" en Photoshop?</p>
-                <label><input type="radio" name="q9" value="Combinar capas de diferentes formas"> Combinar capas de diferentes formas</label>
-                <label><input type="radio" name="q9" value="Convertir una imagen a escala de grises"> Convertir una imagen a escala de grises</label>
-                <label><input type="radio" name="q9" value="Recortar imágenes"> Recortar imágenes</label>
-                <label><input type="radio" name="q9" value="Añadir filtros automáticos"> Añadir filtros automáticos</label>
-                <span id="resultado-q9"></span>
-            </div>
-    
-            <div class="quiz-question">
-                <p>🔟 ¿Qué es un mockup en diseño?</p>
-                <label><input type="radio" name="q10" value="Un boceto hecho a mano"> Un boceto hecho a mano</label>
-                <label><input type="radio" name="q10" value="Una representación visual de un diseño"> Una representación visual de un diseño</label>
-                <label><input type="radio" name="q10" value="Un software de animación"> Un software de animación</label>
-                <label><input type="radio" name="q10" value="Un formato de imagen"> Un formato de imagen</label>
-                <span id="resultado-q10"></span>
-            </div>
-    
-            <button class="buttone" type="submit">Enviar respuestas</button>
-        </form>
-        <p id="result" class="quiz-result"></p>
-    </div>
+                      <!-- Pregunta 1 -->
+                      <div class="carousel-item active pregunta">
+                          <h5 for="pregunta1">1. ¿Qué software es más utilizado para la ilustración digital?</h5>
+                          <div class="questions">
+                          <div class="form-check col-lg-5">
+                            <input class="form-check-input d-none" type="radio" id="colorRojo" name="pregunta1" value="Rojo">
+                            <label class="answer" for="colorRojo">Rojo</label>
+                          </div>
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none " type="radio" id="colorAzul" name="pregunta1" value="Azul"> 
+                              <label class="answer" for="colorAzul">Azul</label> 
+                            
+                          </div>
+                          <div class="form-check col-lg-5">
+                            <input class="form-check-input d-none" type="radio" id="colorVerde" name="pregunta1" value="Verde">
+                            <label class="answer" for="colorVerde">Verde</label> 
+                            
+                          </div>
+                          <div class="form-check col-lg-5">
+                            <input class="form-check-input d-none" type="radio" id="colorAmarillo" name="pregunta1" value="Amarillo">
+                            <label class="answer" for="colorAmarillo">Amarillo</label> 
+                            
+                          </div>
+                        </div>
+                          <div class="mt-3">
+                              <button class="btn-sig" data-bs-target="#questionCarousel" data-bs-slide="next">Siguiente</button>
+                          </div>
+                          </div>
+                          
+                      
+                      <!-- Pregunta 2 -->
+                      <div class="carousel-item pregunta">
+                          <h5 for="pregunta2">2. ¿Qué es una tableta gráfica?</h5>
+                          <div class="questions">
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" id="deporteFutbol" name="pregunta2" value="Fútbol">
+                              <label class="answer" for="deporteFutbol">Fútbol</label> 
+                          </div>
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" id="deporteBaloncesto" name="pregunta2" value="Baloncesto"> 
+                              <label class="answer" for="deporteBaloncesto">Baloncesto</label>
+                          </div>
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" id="deporteBeisbol" name="pregunta2" value="Beisbol"> 
+                              <label class="answer" for="deporteBeisbol">Béisbol</label>
+                            </div>
+                            <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" id="deporteTenis" name="pregunta2" value="Tenis">
+                              <label class="answer" for="deporteTenis">Tenis</label>
+                          </div>
+                        </div>
+                          <div class="mt-3">
+                              <button class="btn-ant" data-bs-target="#questionCarousel" data-bs-slide="prev">Anterior</button>
+                              <button class="btn-sig" data-bs-target="#questionCarousel" data-bs-slide="next">Siguiente</button>
+                          </div>
+                      </div>
+                      
+                      <!-- Pregunta 3 -->
+                      <div class="carousel-item  pregunta">
+                          <h5 for="pregunta3">3. ¿Cuál es el formato de imagen que admite transparencias?</h5>
+                          <div class="questions">
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" id="comidaPizza" name="pregunta3" value="Pizza">
+                              <label class="answer" for="comidaPizza">Pizza</label>
+                          </div>
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" id="comidaSushi" name="pregunta3" value="Sushi">
+                              <label class="answer" for="comidaSushi">Sushi</label>
+                          </div>
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" id="comidaHamburguesa" name="pregunta3" value="Hamburguesa"> 
+                              <label class="answer" for="comidaHamburguesa">Hamburguesa</label>
+                          </div>
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" id="comidaPasta" name="pregunta3" value="Pasta"> 
+                              <label class="answer" for="comidaPasta">Pasta</label>
+                          </div>
+                        </div>
+                          <div class="mt-3">
+                              <button class="btn-ant" data-bs-target="#questionCarousel" data-bs-slide="prev">Anterior</button>
+                              <button class="btn-sig" data-bs-target="#questionCarousel" data-bs-slide="next">Siguiente</button>
+                          </div>
+                      </div>
+                      
+      
+                      <!-- Pregunta 4 -->
+                      <div class="carousel-item pregunta">
+                          <h5 for="pregunta4">4. ¿Qué significa la sigla RGB en diseño digital?</h5>
+                          <div class="questions">
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" id="musicaRock" name="pregunta4" value="Rock"> 
+                              <label class="answer" for="musicaRock">Rock</label>
+                          </div>
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" id="musicaPop" name="pregunta4" value="Pop"> 
+                              <label class="answer" for="musicaPop">Pop</label>
+                          </div>
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" id="musicaJazz" name="pregunta4" value="Jazz"> 
+                              <label class="answer" for="musicaJazz">Pasta</label>
+                          </div>
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" id="musicaClasica" name="pregunta4" value="Clasica"> 
+                              <label class="answer" for="musicaClasica">Clásica</label>
+                          </div>
+                        </div>
+                          <div class="mt-3">
+                              <button class="btn-ant" data-bs-target="#questionCarousel" data-bs-slide="prev">Anterior</button>
+                              <button class="btn-sig" data-bs-target="#questionCarousel" data-bs-slide="next">Siguiente</button>
+                          </div>
+                      </div>
+                      
+                      <!-- Pregunta 5 -->
+                      <div class="carousel-item pregunta">
+                          <h5 for="pregunta5">5. ¿Para qué se usa Adobe Illustrator?</h5>
+                          <div class="questions">
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" name="pregunta5" id="animalPerro" value="Perro"> 
+                              <label class="answer" for="animalPerro">Perro</label>
+                          </div>
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" name="pregunta5" id="animalGato" value="Gato">
+                              <label class="answer" for="animalGato">Gato</label>
+                          </div>
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" name="pregunta5" id="animalPajaro" value="Pajaro"> 
+                              <label class="answer" for="animalPajaro">Pájaro</label>
+                          </div>
+                          <div class="form-check col-lg-5">
+                              <input class="form-check-input d-none" type="radio" name="pregunta5" id="animalConejo" value="Conejo"> 
+                              <label class="answer" for="animalConejo">Conejo</label>
+                          </div>
+                        </div>
+                          <div class="mt-3 btn-exa">
+                              <button class="btn-ant" data-bs-target="#questionCarousel" data-bs-slide="prev">Anterior</button>
+                              <button class="btn-examen" type="submit"  disabled>Enviar formulario</button>
+                          </div>
+                      </div>
+                  </form>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </section>
        
     
 
