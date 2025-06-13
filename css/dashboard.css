@@ -131,17 +131,18 @@ nav ul {
     box-shadow: 0px 0px 10px rgba(225, 223, 223, 0.566);
     width: 50%;
     text-align: center;
-    margin: 100px auto;
+    margin-bottom: 110px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     border-color: 10px;
 }
 
-.avatar-container img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  color: #f4f4f4;
+.nombre{
+  margin-top: 5px;
+
+
+
 }
 
 /* Barras de progreso más llamativas */

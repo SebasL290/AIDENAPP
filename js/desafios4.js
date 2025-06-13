@@ -122,29 +122,32 @@ document.addEventListener("DOMContentLoaded",saludousuario)
 
 
 const PopUp = document.querySelector(".popup");
+const BtnPopUp = document.querySelector(".pop-btn");
 const Sect1 = document.querySelector(".sect1");
 const Equis = document.querySelector(".equis");
 const TextoExa = document.querySelector(".pop-text");
 const TextoSig = document.querySelector(".pop-next")
 const iconF = document.querySelector(".icon-f");
-const BtnExa = document.querySelector(".buttone");
-
-let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-const Formulario = document.querySelector("#quiz-form")
+const BtnExa = document.querySelector(".btn-examen");
+const Formulario = document.querySelector("#formulario");
+const Textoresp = document.querySelector(".pop-resp");
+const ImgPop = document.querySelector(".img-pop");
+const ImgPop2 = document.querySelector(".img-pop2");
+const ImgPop3 = document.querySelector(".img-pop3");
+const ImgPop4 = document.querySelector(".img-pop4");
 
 function capturarRespuestas(){
-        
-        const respuesta1 = document.querySelector('input[name="q1"]:checked')?.value;
-        const respuesta2 = document.querySelector('input[name="q2"]:checked')?.value;
-        const respuesta3 = document.querySelector('input[name="q3"]:checked')?.value;
-        const respuesta4 = document.querySelector('input[name="q4"]:checked')?.value;
-        const respuesta5 = document.querySelector('input[name="q5"]:checked')?.value;
-        const respuesta6 = document.querySelector('input[name="q6"]:checked')?.value;
-        const respuesta7 = document.querySelector('input[name="q7"]:checked')?.value;
-        const respuesta8 = document.querySelector('input[name="q8"]:checked')?.value;
-        const respuesta9 = document.querySelector('input[name="q9"]:checked')?.value;
-        const respuesta10 = document.querySelector('input[name="q10"]:checked')?.value;
+        // Capturamos las respuestas seleccionadas
+        const respuesta1 = document.querySelector('input[name="pregunta1"]:checked')?.value;
+        const respuesta2 = document.querySelector('input[name="pregunta2"]:checked')?.value;
+        const respuesta3 = document.querySelector('input[name="pregunta3"]:checked')?.value;
+        const respuesta4 = document.querySelector('input[name="pregunta4"]:checked')?.value;
+        const respuesta5 = document.querySelector('input[name="pregunta5"]:checked')?.value;
+        const respuesta6 = document.querySelector('input[name="pregunta6"]:checked')?.value;
+        const respuesta7 = document.querySelector('input[name="pregunta7"]:checked')?.value;
+        const respuesta8 = document.querySelector('input[name="pregunta8"]:checked')?.value;
+        const respuesta9 = document.querySelector('input[name="pregunta9"]:checked')?.value;
+        const respuesta10 = document.querySelector('input[name="pregunta10"]:checked')?.value;
         return{
             p1: respuesta1,
             p2: respuesta2,
@@ -157,24 +160,22 @@ function capturarRespuestas(){
             p9: respuesta9,
             p10: respuesta10,
         }
-
 }
-
 
 function ValidarRespuestas(e){
     e.preventDefault()
 const respuestasUser = capturarRespuestas()
 const respuestasCorrectas = {
-    p1:"Illustrator",
-    p2:"Un dispositivo para dibujar digitalmente",
-    p3:"PNG",
-    p4:" Rojo, Verde, Azul",
-    p5:"Diseño vectorial",
-    p6: "Pincel",
-    p7: "El número de píxeles por pulgada",
-    p8: "Vectoriales",
-    p9: "Combinar capas de diferentes formas",
-    p10: "Una representación visual de un diseño",
+    p1:"Azul",
+    p2:"Fútbol",
+    p3:"Pizza",
+    p4:"Pop",
+    p5:"Gato",
+    p6:"Invierno",
+    p7:"Chocolate",
+    p8:"Playa",
+    p9:"Profundizaciónweb",
+    p10:"Chocolate",
 }
 let acumulado = 0;
 
@@ -185,54 +186,116 @@ const arrayRespuestasCorrectas = Object.values(respuestasCorrectas)
 for (let i = 0; i < arrayRespuestasUser.length; i++) {
     if(arrayRespuestasUser[i] == arrayRespuestasCorrectas[i]){
         acumulado++
+        Formulario.reset()
     }
     
 }
 
 //verifico cuanto lleva el usuario de progreso previo
+/* let user = JSON.stringify (localStorage.getItem("user")) || {}; */
 
 //condicional de si gane o perdí el examen
 for (let i = 0; i < usuarios.length; i++) {
-    if(usuarios[i].userlogged && acumulado >= 3){
-    PopUp.style.display = 'flex';
-    iconF.style.display = 'flex';
-    Sect1.style.filter = 'blur(5px)'; 
-    TextoExa.textContent ="Ganaste el examen";
-    TextoSig.style.display = 'flex';
-    BtnExa.style.cursor = 'not-allowed';
-    usuarios[i].progreso += 7;
-    usuarios[i].progreso1 += 25
-    localStorage.setItem("usuarios", JSON.stringify(usuarios))
-    }else{
-        PopUp.style.display = 'flex';
-        iconF.style.display = 'none';
-        Sect1.style.filter = 'blur(5px)';  
-        TextoExa.textContent = "Debes repetir el examen";
-        TextoSig.style.display = 'none';
-        BtnExa.style.cursor = 'not-allowed';
+    if (usuarios[i].userLogged && acumulado === 10) {
+      PopUp.style.display = "flex";
+      iconF.style.display = "flex";
+      Sect1.style.filter = "blur(5px)";
+      TextoExa.textContent = `Ganaste el examen`;
+      Textoresp.textContent = `Tu puntaje es ${acumulado}`;
+      ImgPop.style.display = "flex"
+      ImgPop2.style.display = "none"
+      ImgPop3.style.display = "none"
+      ImgPop4.style.display = "none"
+      TextoSig.style.display = "flex";
+      BtnExa.style.cursor = "not-allowed";
+      usuarios[i].progreso += 25;
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    }else if (usuarios[i].userLogged && acumulado === 7 || acumulado === 8 || acumulado === 9) {
+      PopUp.style.display = "flex";
+      iconF.style.display = "flex";
+      Sect1.style.filter = "blur(5px)";
+      TextoExa.textContent = `Ganaste el examen`;
+      Textoresp.textContent = `Tu puntaje es ${acumulado}`;
+      ImgPop.style.display = "none"
+      ImgPop2.style.display = "flex"
+      ImgPop3.style.display = "none"
+      ImgPop4.style.display = "none"
+      TextoSig.style.display = "flex";
+      BtnExa.style.cursor = "not-allowed";
+      usuarios[i].progreso += 25;
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    }else if (usuarios[i].userLogged && acumulado === 0) {
+      PopUp.style.display = "flex";
+      iconF.style.display = "none";
+      Sect1.style.filter = "blur(5px)";
+      TextoExa.textContent = `Debes repetir el examen`;
+      Textoresp.textContent = `Tu puntaje es ${acumulado}`;
+      ImgPop.style.display = "none"
+      ImgPop2.style.display = "none"
+      ImgPop3.style.display = "none"
+      ImgPop4.style.display = "flex"
+      TextoSig.style.display = "none";
+      BtnExa.style.cursor = "not-allowed";
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    } else {
+      PopUp.style.display = "flex";
+      iconF.style.display = "none";
+      Sect1.style.filter = "blur(5px)";
+      TextoExa.textContent = `Debes repetir el examen`;
+      Textoresp.textContent = `Tu puntaje es ${acumulado}`;
+      ImgPop.style.display = "none"
+      ImgPop2.style.display = "none"
+      ImgPop3.style.display = "flex"
+      ImgPop4.style.display = "none"
+      TextoSig.style.display = "none";
+      BtnExa.style.cursor = "not-allowed";
     }
-    }
-
+  }
 }
+
+
 
 Formulario.addEventListener("submit", ValidarRespuestas)
 
 function QuitarPopUp(){
-    PopUp.style.display = 'none';
+/*     PopUp.style.display = 'none';
     Sect1.style.filter = 'none'; 
-    BtnExa.style.cursor = 'Pointer';
-     window.location = "../vistas/modulo1.html"
+    BtnExa.style.cursor = 'Pointer'; */
+     window.location = "../vistas/introduccion.html"
 
 }
 
 Equis.addEventListener('click', QuitarPopUp);
 
 function siguienteMódulo(){
-     window.location = "../vistas/modulo2.html"
+     window.location = "../vistas/certificado.html"
 }
 
 iconF.addEventListener('click', siguienteMódulo);
 
+function InvalidarExamen(){
+    for (let i = 0; i < usuarios.length; i++) {
+        if(usuarios[i].userLogged && usuarios[i].progreso >= 100 ){
+
+            PopUp.style.display = 'flex';
+            iconF.style.display = 'flex';
+            Sect1.style.filter = 'blur(5px)';
+            TextoExa.textContent = `Ya ganaste el examen`;
+            TextoSig.style.display = 'flex';
+            BtnExa.disabled = true;
+            /* BtnExa.style.cursor = 'not-allowed'; */
+            return
+            }
+        }
+        PopUp.style.display = 'none';
+        iconF.style.display = 'none';
+        Sect1.style.filter = 'none';
+        TextoSig.style.display = 'none';
+       /*  BtnExa.style.cursor = 'pointer'; */
+       BtnExa.disabled = false;
+        
+        }
+    document.addEventListener('DOMContentLoaded',InvalidarExamen);
 //cerrar sesion menu
 const btncerrarmenu = document.querySelector('.cerrar')
 

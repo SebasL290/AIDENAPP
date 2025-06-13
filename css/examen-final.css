@@ -1,0 +1,485 @@
+/* menu */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../sources/images/fondomodulos.png);
+    background-size: cover;
+}
+@font-face {
+    font-family: "LEMONMILK";
+    src: url("../sources/fonts//LEMONMILK-Medium.otf");
+    src: url("../sources/fonts/LEMONMIL-Regular.otf")
+}
+.enlace{
+    text-decoration: none;
+    }
+    
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+.fa-user{
+color: #f4f4f4;
+}
+
+.atras{
+background: none;
+border: none;
+color: #f4f4f4;
+font-size: 25px;
+
+}
+
+.logo {
+  position: absolute;
+  left: 49%;
+  height: 40px; 
+  z-index: 12;
+}
+
+.respmenu a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  width: 150px;
+  flex-direction: column;
+  padding: 10px 20px; 
+  max-width: 200px;
+  font-variant: small-caps;
+  text-shadow: 1px 1px black;
+  align-items: flex-end;
+}
+
+.respmenu li {
+  margin-top: 5px;
+}
+
+.respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+  position: absolute;
+  box-sizing: border-box;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  right: -10px;
+  top: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.respmenu .fa-bars, .respmenu .fa-times {
+  font-size: 30px;
+  pointer-events: none;
+}
+
+.respmenu input[type="checkbox"] {
+  opacity: 0;
+}
+
+.respmenu {
+  color: white;
+  position: relative;
+  min-height: 30px;
+}
+
+.respmenu nav {
+  display: none;
+}
+
+.respmenu input:checked ~ nav {
+  display: flex;
+  position: absolute;
+  right: 145px;
+}
+
+.respmenu input:checked ~ .fa-bars {
+  display: none;
+}
+
+.respmenu input:not(:checked) ~ .fa-times {
+  display: none;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  margin-top: 10px;
+  padding: 0;
+  font-family: "LEMONMILK";
+}   
+.cerrar{ 
+  font-family: 'LEMONMILK';
+  background-color: #FF0A6C;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+
+}
+
+/* menu */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+#usuario {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 25px;
+    }
+
+
+.logo {
+    position: absolute;
+    left: 49%;
+    height: 40px; 
+    z-index: 12;
+}
+.respmenu a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    width: 150px;
+    flex-direction: column;
+    padding: 10px 20px; 
+    max-width: 200px;
+    font-variant: small-caps;
+    text-shadow: 1px 1px black;
+    align-items: flex-end;
+  }
+
+  .respmenu li {
+    margin-top: 5px;
+  }
+
+  .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    right: -10px;
+    top: 0;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .respmenu .fa-bars, .respmenu .fa-times {
+    font-size: 30px;
+    pointer-events: none;
+  }
+  
+  .respmenu input[type="checkbox"] {
+    opacity: 0;
+  }
+  
+  .respmenu {
+    color: white;
+    position: relative;
+    min-height: 30px;
+  }
+  
+  .respmenu nav {
+    display: none;
+  }
+  
+  .respmenu input:checked ~ nav {
+    display: flex;
+    position: absolute;
+    right: 145px;
+  }
+  
+  .respmenu input:checked ~ .fa-bars {
+    display: none;
+  }
+  
+  .respmenu input:not(:checked) ~ .fa-times {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+    font-family: "LEMONMILK";
+  } 
+  .cerrar{ 
+    font-family: 'LEMONMILK';
+    background-color: #FF0A6C;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+
+}
+/* menu */
+.container1{
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.t-intro{
+    margin-top: 50px;
+    color: #fcfcfc;
+    font-family: 'LEMONMILK'; 
+}
+.pregunta{
+    margin-bottom: 20px;
+}
+.exa{
+    margin-top: 50px;
+    border: 0px;
+   
+}
+.mt-5{
+    margin-bottom: 50px;
+}
+.quiz-container {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px black;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+}
+.pregunta h5 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #f4f4f4;
+}
+.pregunta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.questions{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+.answer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4c045b;
+    margin-top: 20px;
+    color: white;
+    border: none;
+    padding: 30px 220px;
+    width: 200px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}   
+.answer:hover {
+    background-color: #77078d;
+}
+ .form-check-input:checked ~ .answer {
+    background-color:#8908a2;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.btn-sig{
+    background-color: #FF0A6C;
+    margin-top: 20px;
+    margin-left: 25px;
+    border: none;
+    outline: none;
+    border-radius: 45px;
+    font-size:15px ;
+    color: white;
+    font-weight: 600;
+    height: 40px;
+    width: 100px;   
+}
+.btn-ant{
+    background-color: #6c757d;
+    margin-top: 20px;
+    margin-left: 25px;
+    border: none;
+    outline: none;
+    border-radius: 45px;
+    font-size:15px ;
+    color: white;
+    font-weight: 600;
+    height: 40px;
+    width: 100px;
+}
+.btn-examen{
+    background-color: #FF0A6C;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 25px;
+    border: none;
+    outline: none;
+    border-radius: 45px;
+    font-size:15px ;
+    color: white;
+    font-weight: 600;
+    height: 40px;
+    width: 150px;
+}
+
+@media(min-width:990px) and (max-width:1200px){
+    .answer {
+        padding: 30px 180px;
+    }
+
+}
+
+
+/* pop-up */
+.sect1{
+    filter: blur(0px);
+}
+.popup {
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    min-height: 65vh;
+    margin: auto;
+    top: 0;
+    display: none;
+}
+.popup-caja{
+    border-radius: 20px;
+    padding: 150px 0px 50px 0;
+    max-width: 900px;
+    min-width: 300px;
+    width: 35%;
+    border: 3px solid #888888;
+    box-shadow: 0px 0px 10px rgba(225, 223, 223, 0.566);
+    background: transparent;
+    background-color: #6b067f;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    flex-direction: column;
+    display: flex;
+    margin: 149px auto;
+}
+.Pop-C1{
+display: flex;
+justify-content: end;
+margin: -120px 30px 10px 0;
+}
+.sig{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    flex-direction: column;
+    margin-top: 0px;
+}
+.icon-f{
+    display: none;
+    font-size: 35px;
+    color:#ffffff;
+    cursor: pointer;
+}
+.equis{
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+.Pop-C2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.pop-btn{
+    margin-top: 25px;
+    border-radius: 45px;
+    padding: 10px 15px;
+    border: 2px solid white;
+    background-color: white;
+    color: rgb(77, 31, 126);
+    font-weight: 600;
+}
+.pop-text{
+    text-align: center;
+    margin: 0 10px 0 10px;
+    font-size: 30px;
+}
+.pop-resp{
+    font-size: 20px;
+}
+.img-pop{
+    display: none;
+    width: 120%;
+}   
+.img-pop2{
+    display: none;
+    width: 85%;
+}   
+.img-pop3{
+    display: none;
+    width: 70%;
+}   
+.img-pop4{
+    display: none;
+    width: 70%;
+}
+.certi{
+    margin-left: 0%;
+}
+@media(min-width:992px){
+    .certi{
+        margin-left: 15px;
+    }  
+}
+
+/* footer */
+footer {
+    background-color: #2B2159; 
+    padding: 15px;
+    text-align: center;
+}
+.imagenes {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 30px;
+margin-top: 15px;
+}
+.footer-content {
+    
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff; 
+}
+.logof {
+    height: 50px; 
+    cursor: pointer;
+}
+.social-icons a {
+    margin: 0 10px;
+    color: #fff; 
+    font-size: 20px;
+    text-decoration: none;
+}
+.suggestions {
+    color: #fff; 
+    text-decoration: none;
+    font-size: 16px;
+}
+.suggestions:hover {
+    text-decoration: underline;
+}

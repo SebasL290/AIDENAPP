@@ -582,7 +582,7 @@ header {
     border: none;
 }
 .wrapper{
-    margin: 0px auto 0;
+    margin: 10px auto 0;
     position: fixed;
     z-index: 20;
     left: 0;
@@ -606,7 +606,7 @@ header {
     transform: scale(1);
 }
 .wrapper.active{
-    height: 520px;
+    height: 480px;
 }
 .wrapper .form-box {
     width: 100%;
