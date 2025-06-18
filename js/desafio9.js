@@ -84,7 +84,7 @@ for (let i = 0; i < usuarios.length; i++) {
       TextoSig.style.display = "flex";
       BtnExa.style.cursor = "not-allowed";
       usuarios[i].progreso += 7;
-      usuarios[i].progreso1 += 25;
+      usuarios[i].progreso3 += 25;
       
       localStorage.setItem("usuarios", JSON.stringify(usuarios));
     }else {
@@ -107,14 +107,14 @@ function QuitarPopUp(){
 /*     PopUp.style.display = 'none';
     Sect1.style.filter = 'none'; 
     BtnExa.style.cursor = 'Pointer'; */
-     window.location = "../index.html"
+     window.location = "../vistas/introduccion.html"
 
 }
 
 Equis.addEventListener('click', QuitarPopUp);
 
 function siguienteMódulo(){
-     window.location = "../index.html"
+     window.location = "../vistas/index.html"
 }
 
 iconF.addEventListener('click', siguienteMódulo);

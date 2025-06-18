@@ -44,9 +44,7 @@ font-size: 25px;
 color: #fff;
 }
 
-section
-{
-    background-color: #3c1d5b;
+section{
     position:static;
     width: 100%;
     height: 100vh;
@@ -64,9 +62,7 @@ section::before
     z-index: 10;
 }
 
-
-section img
-{
+section img{
     position:absolute;
     top: 0;
     left: 0;
@@ -109,12 +105,6 @@ section img#mountains_front
 display: none;
 }
 
-#container{
-   /*  margin-top: 20%; */
-    text-align: right;
-   
-    font-weight: lighter;
-}
 
 @font-face {
     font-family: "LEMONMILK";
@@ -190,12 +180,7 @@ nav ul i {
     #titulitoT{
     font-size: 20px;
     }
-    #container{
-        margin-top: 5%;
-        text-align: right;
-        left: 30px;
-        font-weight: lighter;
-    }
+   
     #titulo34T{
     font-size: 20px;
     }
@@ -232,19 +217,6 @@ nav ul i {
 .strong{
  color: #fff;
  cursor: pointer;
-}
-
-#misiones {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    gap: 30px;
-    margin-bottom: 180px;
-    margin-top: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    font-weight: lighter;
 }
 
 
@@ -853,50 +825,9 @@ font-size: 25px;
 color: #fff;
 }
 
-section
-{
-    background-color: #3c1d5b;
-    position:static;
-    width: 100%;
-    height: 100vh;
-    padding: 100px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-section::before
-{
-    content: '';
-    position:fixed;
-    bottom: 0 ;
-    z-index: 10;
-}
 
 
-section img
-{
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-}
 
-section img#stars
-{
-    text-align: center;
-}
-section img#moon
-{
-    mix-blend-mode: screen;
-}
-section img#mountains_front
-{
-    z-index: 11;
-}
 
 #seccion2
 {
@@ -911,10 +842,8 @@ display: none;
 }
 
 #container{
-   /*  margin-top: 20%; */
-    text-align: right;
-   
-    font-weight: lighter;
+text-align: right;
+font-weight: lighter;
 }
 
 @font-face {
@@ -991,12 +920,7 @@ nav ul i {
     #titulitoT{
     font-size: 20px;
     }
-    #container{
-        margin-top: 5%;
-        text-align: right;
-        left: 30px;
-        font-weight: lighter;
-    }
+    
     #titulo34T{
     font-size: 20px;
     }
@@ -1036,16 +960,15 @@ nav ul i {
 }
 
 #misiones {
-    display: flex;
+    
+    /* display: flex; */
     justify-content: center;
     align-items: center; 
-    gap: 30px;
+    gap: 50px;
     margin-bottom: 30px;
     margin-top: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    font-weight: lighter;
+    flex-direction: row;
+   
 }
 
 

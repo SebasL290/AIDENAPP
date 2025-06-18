@@ -107,14 +107,14 @@ function QuitarPopUp(){
 /*     PopUp.style.display = 'none';
     Sect1.style.filter = 'none'; 
     BtnExa.style.cursor = 'Pointer'; */
-     window.location = "../index.html"
+     window.location = "../vistas/introduccion.html"
 
 }
 
 Equis.addEventListener('click', QuitarPopUp);
 
 function siguienteMódulo(){
-     window.location = "../index.html"
+     window.location = "../vistas/index.html"
 }
 
 iconF.addEventListener('click', siguienteMódulo);
