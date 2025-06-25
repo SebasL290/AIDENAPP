@@ -64,6 +64,7 @@ function registrarUser(e) {
         userName: username.value.toLowerCase(),
         userPass: password.value.toLowerCase(),
         userEmail: email.value.toLowerCase(),
+        userNombre: ".",
         userlogged: false,
         avatar: "avatar1.png",
         certificado: false,

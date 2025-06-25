@@ -8,8 +8,8 @@ const nombre2 = document.querySelector("#user-name2")
 function nombre1() {
     for (let i = 0; i < usuarios.length; i++) {
       if(usuarios[i].userlogged){
-        nombre.textContent = `¡Felicidades ${usuarios[i].userName}!`;
-        nombre2.textContent = `Este certificado acredita que ${usuarios[i].userName} ha concluido satisfactoriamente el curso:`;
+        nombre.textContent = `¡Felicidades ${usuarios[i].userNombre}!`;
+        nombre2.textContent = `Este certificado acredita que ${usuarios[i].userNombre} ha concluido satisfactoriamente el curso:`;
       }
       
     }
@@ -28,7 +28,7 @@ document.getElementById("descargar").addEventListener("click", () => {
     html2canvas: { scale: 2 },
     jsPDF: {
       unit: "px",
-      format: [500, 760],
+      format: [555, 750],
       orientation: "landscape"
     }
   };

@@ -1,17 +1,16 @@
 body {
-  background: linear-gradient(to bottom right, #4c1d95, #a21caf, #db2777);
-  min-height: 100vh;
+  background-image: url(../sources/images/fondomodulos.png);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
   color: #ffffff;
-  margin: 0;
-  padding: 0;
+  
 }
 
 .header {
   margin-bottom: 2rem;
+  text-transform: capitalize !important;
 }
 
 .header h1 {
@@ -20,6 +19,7 @@ body {
   margin-bottom: 0.5rem;
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  text-transform: capitalize !important;
 }
 
 .subtitle {
@@ -33,6 +33,12 @@ body {
   padding: 1.5rem;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content-box h1{
+  text-transform: capitalize !important;
+
+
 }
 
 .title {
@@ -86,31 +92,26 @@ body {
 }
 
 
-
-
-
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: auto;
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #4c1d95, #a21caf, #db2777);
+
   font-family: sans-serif;
-  color: #ffffff;
-  padding: 2rem;
+  
 }
 
 
 .certificate {
   max-width: 768px;
-  background-color: rgba(201, 5, 255, 0.584);
-  backdrop-filter: blur(12px);
+  background-color: #2B2159;
+  filter: blur(0.5);
   padding: 2.5rem;
   border-radius: 1.5rem;
-  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .button-container {
@@ -132,4 +133,9 @@ body {
 
 #descargar:hover {
   background-color: #db2777;
+}
+
+.logo {
+  height: 50px; 
+  margin: auto;
 }

@@ -1,0 +1,222 @@
+body {
+   background-image: url(../sources/images/fondomodulos.png);
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+}
+
+
+.container1 {
+    margin: 130px auto;
+    width: 90%;
+    max-width: 700px;
+    padding: 30px;  
+    border: 2px solid white;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(225, 223, 223, 0.566);
+    filter: blur(0.5);
+
+}
+@font-face {
+    font-family: "LEMONMILK";
+    src: url("../sources/fonts//LEMONMILK-Medium.otf");
+    src: url("../sources/fonts/LEMONMIL-Regular.otf")
+}
+
+
+.titulo{
+    color: white;
+    font-family: "LEMONMILK";
+
+}
+
+.desc{
+    color: white;
+}
+.mb-3{
+    display: flex;
+    justify-content: center;
+}
+.form-control{
+    width: 90% !important;
+}
+
+.btn-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn-custom {
+    width: 50%;
+  background-color: #ffffff;
+  border: none;
+  color: #250f54;
+  padding: 10px 50px;
+  border-radius: 45px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  }
+
+.btn-custom:hover {
+   
+    background-color: #de0a71;
+    color: white;
+}
+
+
+/* menu */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+#usuario {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 25px;
+    }
+
+
+.logo {
+    position: absolute;
+    left: 49%;
+    height: 40px; 
+    z-index: 12;
+}
+.respmenu a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    width: 150px;
+    flex-direction: column;
+    padding: 10px 20px; 
+    max-width: 200px;
+    font-variant: small-caps;
+    text-shadow: 1px 1px black;
+    align-items: flex-end;
+  }
+
+  .respmenu li {
+    margin-top: 5px;
+  }
+
+  .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    right: -10px;
+    top: 0;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .respmenu .fa-bars, .respmenu .fa-times {
+    font-size: 30px;
+    pointer-events: none;
+  }
+  
+  .respmenu input[type="checkbox"] {
+    opacity: 0;
+  }
+  
+  .respmenu {
+    color: white;
+    position: relative;
+    min-height: 30px;
+  }
+  
+  .respmenu nav {
+    display: none;
+  }
+  
+  .respmenu input:checked ~ nav {
+    display: flex;
+    position: absolute;
+    right: 145px;
+  }
+  
+  .respmenu input:checked ~ .fa-bars {
+    display: none;
+  }
+  
+  .respmenu input:not(:checked) ~ .fa-times {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+    font-family: "LEMONMILK";
+    color: #ffffff;
+  }
+  .cerrar{ 
+    font-family: 'LEMONMILK';
+    background-color: #FF0A6C;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+
+}
+
+
+/* footer */
+
+footer {
+  background-color: #2B2159; 
+  padding: 15px;
+  text-align: center;
+}
+.imagenes {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 30px;
+margin-top: 15px;
+}
+.footer-content {
+  
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff; 
+}
+
+.logof {
+  height: 50px; 
+  cursor: pointer;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #fff; 
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.suggestions {
+  color: #fff; 
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.suggestions:hover {
+  text-decoration: underline;
+}
