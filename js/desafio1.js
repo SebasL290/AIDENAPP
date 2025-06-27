@@ -10,10 +10,7 @@ const iconF = document.querySelector(".icon-f");
 const BtnExa = document.querySelector(".btn-examen");
 const Formulario = document.querySelector("#formulario");
 const Textoresp = document.querySelector(".pop-resp");
-const ImgPop = document.querySelector(".img-pop");
-const ImgPop2 = document.querySelector(".img-pop2");
-const ImgPop3 = document.querySelector(".img-pop3");
-const ImgPop4 = document.querySelector(".img-pop4");
+
 
 function capturarRespuestas(){
         // Capturamos las respuestas seleccionadas
@@ -71,7 +68,7 @@ for (let i = 0; i < arrayRespuestasUser.length; i++) {
 }
 
 //verifico cuanto lleva el usuario de progreso previo
-/* let user = JSON.stringify (localStorage.getItem("user")) || {}; */
+
 
 //condicional de si gane o perdí el examen
 for (let i = 0; i < usuarios.length; i++) {
@@ -99,8 +96,6 @@ for (let i = 0; i < usuarios.length; i++) {
   }
 }
 
-
-
 Formulario.addEventListener("submit", ValidarRespuestas)
 
 function QuitarPopUp(){
@@ -118,4 +113,27 @@ function siguienteMódulo(){
 }
 
 iconF.addEventListener('click', siguienteMódulo);
+
+function InvalidarExamen() {
+  for (let i = 0; i < usuarios.length; i++) {
+    if (usuarios[i].userLogged && usuarios[i].progreso >= 25) {
+      PopUp.style.display = "flex";
+      iconF.style.display = "flex";
+      Sect1.style.filter = "blur(5px)";
+      TextoExa.textContent = `Ya ganaste el examen`;
+      TextoSig.style.display = "flex";
+      BtnExa.disabled = true;
+      /* BtnExa.style.cursor = 'not-allowed'; */
+      return;
+    }
+  }
+  PopUp.style.display = "none";
+  iconF.style.display = "none";
+  Sect1.style.filter = "none";
+  TextoSig.style.display = "none";
+  /*  BtnExa.style.cursor = 'pointer'; */
+  BtnExa.disabled = false;
+}
+
+document.addEventListener("DOMContentLoaded", InvalidarExamen);
 
