@@ -119,26 +119,3 @@ function siguienteMódulo(){
 
 iconF.addEventListener('click', siguienteMódulo);
 
-function InvalidarExamen(){
-    for (let i = 0; i < usuarios.length; i++) {
-        if(usuarios[i].userlogged && usuarios[i].progreso >= 100 ){
-
-            PopUp.style.display = 'flex';
-            iconF.style.display = 'flex';
-            Sect1.style.filter = 'blur(5px)';
-            TextoExa.textContent = `Ya ganaste el examen`;
-            TextoSig.style.display = 'flex';
-            BtnExa.disabled = true;
-            /* BtnExa.style.cursor = 'not-allowed'; */
-            return
-            }
-        }
-        PopUp.style.display = 'none';
-        iconF.style.display = 'none';
-        Sect1.style.filter = 'none';
-        TextoSig.style.display = 'none';
-       /*  BtnExa.style.cursor = 'pointer'; */
-       BtnExa.disabled = false;
-        
-        }
-    document.addEventListener('DOMContentLoaded',InvalidarExamen);
