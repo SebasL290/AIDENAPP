@@ -70,8 +70,6 @@ for (let i = 0; i < arrayRespuestasUser.length; i++) {
     
 }
 
-//verifico cuanto lleva el usuario de progreso previo
-/* let user = JSON.stringify (localStorage.getItem("user")) || {}; */
 
 //condicional de si gane o perdí el examen
 for (let i = 0; i < usuarios.length; i++) {
@@ -107,14 +105,14 @@ function QuitarPopUp(){
 /*     PopUp.style.display = 'none';
     Sect1.style.filter = 'none'; 
     BtnExa.style.cursor = 'Pointer'; */
-     window.location = "../vistas/introduccion.html"
+     window.location = "../vistas/usuario.html"
 
 }
 
 Equis.addEventListener('click', QuitarPopUp);
 
 function siguienteMódulo(){
-     window.location = "../vistas/index.html"
+     window.location = "../vistas/usuario.html"
 }
 
 iconF.addEventListener('click', siguienteMódulo);

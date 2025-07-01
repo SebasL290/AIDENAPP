@@ -9,7 +9,7 @@ function AgregarNombre (e){
 for (let i = 0; i < usuarios.length; i++) {
     e.preventDefault();
     if(usuarios[i].userlogged){
-    window.location = "./Certificado.html"
+    window.location = "./certificado.html"
     usuarios[i].userNombre = Nombre.value,
     localStorage.setItem("usuarios", JSON.stringify(usuarios))
     Formulario.reset()

@@ -1,17 +1,5 @@
 let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-
-//avatar
-const avatarimg = document.querySelector("#avatar-img")
-const avatar1 = document.querySelector("#avatar-uno")
-const avatar2 = document.querySelector("#avatar-dos")
-const avatar3 = document.querySelector("#avatar-tres")
-
-function cambiaravatar(){
-
-
-}
-
 //nombre
 const nombre = document.querySelector("#user-name")
 
@@ -50,17 +38,15 @@ barras()
 
 
 //certificado
-const certificado = document.querySelector('#btn2')
+const certificado = document.querySelector('.btn2')
+const enlace = document.querySelector('.enlace')
 
 function activarDescarga() {
   for (let i = 0; i < usuarios.length; i++) {
     if (usuarios[i].userlogged && usuarios[i].progreso === 100) {
-      /* BtnDescargar.style.cursor = 'pointer!important'; */
-      btn2.style.background = "#FF0A6C";
-      btn2.disabled = false;
+      certificado.style.background = "#FF0A6C";
       usuarios[i].certificado = true
-      window.location = "../vistas/precertificado.html"
-        localStorage.setItem("usuarios", JSON.stringify(usuarios))
+      localStorage.setItem("usuarios", JSON.stringify(usuarios))
       return
     }
   }
@@ -68,6 +54,22 @@ function activarDescarga() {
 }
 
 document.addEventListener("DOMContentLoaded", activarDescarga);
+
+
+
+function activarDescarga1() {
+  for (let i = 0; i < usuarios.length; i++) {
+    if (usuarios[i].userlogged && usuarios[i].progreso === 100) {
+      window.location = "../vistas/precertificado.html"
+      usuarios[i].certificado = true
+      localStorage.setItem("usuarios", JSON.stringify(usuarios))
+      return
+    }
+  }
+
+}
+
+document.addEventListener("click", activarDescarga1);
 
 
 

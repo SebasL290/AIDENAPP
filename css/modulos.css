@@ -297,7 +297,7 @@ nav ul i {
     width: 380px;
     height: 511px;
     color: whitesmoke;
-    filter: grayscale(1) brightness(0.5);
+   
 
 }
 .desafio1 h5{
@@ -321,9 +321,7 @@ nav ul i {
     text-align: center;
     width: 380px;
     height: 511px;
-    color: whitesmoke;
-    filter: grayscale(1) brightness(0.5);
-    
+    color: whitesmoke;    
 
 }
 .desafio2 h5{
@@ -372,11 +370,11 @@ nav ul i {
     
 }
 .btn3{
-    cursor: not-allowed;
+ cursor: not-allowed;
     
 }
 .btn4{
-    cursor: not-allowed;
+cursor: not-allowed;
 
 }
 .btn5{

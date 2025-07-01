@@ -94,6 +94,53 @@ function validarUsuario (e){
     loginForm.addEventListener('submit',validarUsuario)
 
 
+
+//Modo invitado (registro)
+const btnInvitador = document.querySelector(".btn-invr");
+
+function registrarInvitado(e){
+    e.preventDefault();
+    let user = {
+        userName: "Invitado",
+        userPass:  "none",
+        userEmail:  "none",
+        userNombre: ".",
+        userlogged: true,
+        certificado: false,
+        progreso: 0,
+        progreso1: 0,
+        progreso2: 0,
+        progreso3: 0
+    }
+    //enviar información a local storage
+
+    let usuarios = JSON.parse(localStorage.getItem("usuarios"))  || [];
+    usuarios.push(user)
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));   
+    window.location = "index.html"
+}
+
+btnInvitador.addEventListener("click",registrarInvitado)
+
+//Modo invitado (inicio)
+const btnInvitadoi = document.querySelector(".btn-invi");
+function IniciarInvitado (e){
+    e.preventDefault();
+    //llamar la información de local storage
+    for (let i = 0; i < usuarios.length; i++) {
+      if (usuarios[i].userName === "Invitado"){
+    
+        window.location = "index.html"
+        usuarios[i].userlogged = true
+        localStorage.setItem("usuarios", JSON.stringify(usuarios))
+        return
+    }
+  }
+}
+
+btnInvitadoi.addEventListener("click", IniciarInvitado)
+
+
 //saludo
 const btnusuario  = document.querySelector(".Dash")
 const btnregistro  = document.querySelector(".btnpopup")
