@@ -92,7 +92,7 @@ section img#mountains_front
 #seccion2
 {
     position: relative;
-    margin-top: -180px;
+    margin-top: -200px;
     padding: 100px;
     background-color: #1c0522;
 }
@@ -1470,6 +1470,25 @@ margin-top: 15px;
     font-weight: 500;
 }
 #btni:hover {
+    background: #3c1d5b;
+}
+#btnin{
+    margin-top: 10px;
+    width: 100%;
+    height: 45px;
+    background: #FF0A6C;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+}
+#btnin{
+background: #fd438d;
+}
+btni:hover {
     background: #3c1d5b;
 }
 #btnr{
