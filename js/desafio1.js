@@ -42,16 +42,16 @@ function ValidarRespuestas(e){
     e.preventDefault()
 const respuestasUser = capturarRespuestas()
 const respuestasCorrectas = {
-    p1:"Azul",
-    p2:"Fútbol",
-    p3:"Pizza",
-    p4:"Pop",
-    p5:"Gato",
-    p6:"Invierno",
-    p7:"Chocolate",
-    p8:"Playa",
-    p9:"Profundizaciónweb",
-    p10:"Chocolate",
+    p1:"Color",
+    p2:"PenTool",
+    p3:"Regladelostercios",
+    p4:"Superposición",
+    p5:"Tamaño",
+    p6:"Simetría",
+    p7:"EspacioNegativo",
+    p8:"LeadingLines",
+    p9:"PuntoFocal",
+    p10:"Balance",
 }
 let acumulado = 0;
 
