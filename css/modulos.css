@@ -578,6 +578,7 @@ header {
 .btninicio-popup{
     background: none;
     border: none;
+    margin-left: -10px;
 }
 .wrapper{
     margin: 10px auto 0;
