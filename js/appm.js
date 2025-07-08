@@ -119,7 +119,7 @@ function registrarInvitado(e){
     let usuarios = JSON.parse(localStorage.getItem("usuarios"))  || [];
     usuarios.push(user)
     localStorage.setItem("usuarios", JSON.stringify(usuarios));   
-    window.location = "index.html"
+    window.location = "../index.html"
 }
 
 btnInvitador.addEventListener("click",registrarInvitado)
@@ -132,7 +132,7 @@ function IniciarInvitado (e){
     for (let i = 0; i < usuarios.length; i++) {
       if (usuarios[i].userName === "Invitado"){
     
-        window.location = "index.html"
+        window.location = "../index.html"
         usuarios[i].userlogged = true
         localStorage.setItem("usuarios", JSON.stringify(usuarios))
         return

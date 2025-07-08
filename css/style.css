@@ -99,9 +99,7 @@ section img#mountains_front
 
 
 
-.Dash{
-display: none;
-}
+
 
 
 @font-face {
@@ -110,6 +108,9 @@ display: none;
     src: url("../sources/fonts/LEMONMIL-Regular.otf")
 }
 
+.Dash{
+display: none;
+}
 
 nav {  
     display: flex;
