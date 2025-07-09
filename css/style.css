@@ -165,37 +165,32 @@ nav ul i {
     font-weight: lighter;
     font-size: 30px;
     margin-bottom: 100px;
+    
    
 
 }
 
 @media(max-width:576px){
-    body {
-        overflow-x: hidden;
-        background-color: #3c1d5b;
- 
-        background-repeat: no-repeat;
-    }
     #titulitoT{
-    font-size: 20px;
+    font-size: 10px;
+    text-align: center;
     }
    
     #titulo34T{
-    font-size: 20px;
+    font-size: 10px;
+    text-align: center;
     }
 }
 
 @media(max-width:992px) and (min-width:577px){
-    body {
-    overflow-x: hidden;
-    background-color: #3c1d5b;
-    background-repeat: no-repeat;
-     }
+
     #titulitoT{
     font-size: 25px;
+    
     }
     #titulo34T{
     font-size: 25px;
+    
     }
 }
 
