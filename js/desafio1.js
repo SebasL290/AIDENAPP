@@ -80,7 +80,7 @@ for (let i = 0; i < usuarios.length; i++) {
       Textoresp.textContent = `Tu puntaje es ${acumulado}`;
       TextoSig.style.display = "flex";
       BtnExa.style.cursor = "not-allowed";
-      usuarios[i].progreso += 7;
+      usuarios[i].progreso += 9;
       usuarios[i].progreso1 += 25;
       
       localStorage.setItem("usuarios", JSON.stringify(usuarios));

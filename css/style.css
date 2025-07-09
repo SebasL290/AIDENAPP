@@ -1529,3 +1529,20 @@ btni:hover {
 
 
 /* pop up */
+
+
+.error-msg {
+  background: rgba(255, 0, 84, 0.15);
+  border: 1px solid rgba(255, 0, 84, 0.3);
+  color: #ff2f70;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(255, 0, 84, 0.2);
+  display: none;
+}
+

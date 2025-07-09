@@ -91,7 +91,7 @@ formulario.addEventListener('submit', registrarUser)
 
 
 let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
+const error = document.getElementById("errorBox")
 //inicio de sesion 
 function validarUsuario (e){
 e.preventDefault()
@@ -109,6 +109,7 @@ for (let i = 0; i < usuarios.length; i++) {
       btnregistro.style.display = "none"
       return
     }}
+
     alert("Usuario o contraseña incorrecta")
     loginForm.reset()
     

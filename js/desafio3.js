@@ -45,16 +45,16 @@ function ValidarRespuestas(e){
     e.preventDefault()
 const respuestasUser = capturarRespuestas()
 const respuestasCorrectas = {
-    p1:"Azul",
-    p2:"Fútbol",
-    p3:"Pizza",
-    p4:"Pop",
-    p5:"Gato",
-    p6:"Invierno",
-    p7:"Chocolate",
-    p8:"Playa",
-    p9:"Profundizaciónweb",
-    p10:"Chocolate",
+    p1:"Photoshop",
+    p2:"Illustrator",
+    p3:"After Effects",
+    p4:"InDesign",
+    p5:"Adobe XD",
+    p6:"Premiere",
+    p7:"Lightroom",
+    p8:"Illustrator",
+    p9:"Figma",
+    p10:"After Effects",
 }
 let acumulado = 0;
 
@@ -83,7 +83,7 @@ for (let i = 0; i < usuarios.length; i++) {
       Textoresp.textContent = `Tu puntaje es ${acumulado}`;
       TextoSig.style.display = "flex";
       BtnExa.style.cursor = "not-allowed";
-      usuarios[i].progreso += 7;
+      usuarios[i].progreso += 9;
       usuarios[i].progreso1 += 25;
       
       localStorage.setItem("usuarios", JSON.stringify(usuarios));
