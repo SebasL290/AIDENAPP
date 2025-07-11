@@ -57,7 +57,7 @@ function registrarUser(e) {
     let usuarios = JSON.parse(localStorage.getItem("usuarios"))  || [];
     for (let i = 0; i < usuarios.length; i++) {
         if (usuarios[i].userEmail === correo.value) {
-            alert("Este correo ya está registrado. Usa otro o inicia sesión.");
+            
             formulario.reset();
             return;
         }
@@ -90,7 +90,7 @@ for (let i = 0; i < usuarios.length; i++) {
       PopUp.style.display = 'none';
       return
     }}
-    alert("Usuario o contraseña incorrecta")
+    
     loginForm.reset()
     
 }
