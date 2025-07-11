@@ -25,7 +25,7 @@ let mountains_front = document.getElementById('mountains_front');
     window.addEventListener('scroll', function (){
         let value = window.scrollY;
         stars.style.top = value * 0.25 + 'px' ;
-        avion.style.left = value * 0.45 + 'px' ;
+        avion.style.left = value * 0.5 + 'px' ;
         moon.style.top = value * 0.50 + 'px' ;
         mountains_behind.style.top = value * 0.7 + 'px' ;
         mountains_front.style.left = value * 0 + 'px' ;

@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    width: 100%;
     
 }
 .seccion1{
@@ -54,8 +55,7 @@ section{
     align-items: center;
     overflow: hidden;
 }
-section::before
-{
+section::before{
     content: '';
     position:absolute;
     bottom: 0 ;
@@ -92,7 +92,7 @@ section img#mountains_front
 #seccion2
 {
     position: relative;
-    margin-top: -200px;
+    margin-top: -300px;
     padding: 100px;
     background-color: #1c0522;
 }
